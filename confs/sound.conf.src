@@ -1,0 +1,6 @@
+alias snd-card-0 snd-hda-intel
+alias sound-slot-0 snd-hda-intel
+#options snd-hda-intel probe_mask=0x102 position_fix=3 
+#bdl_pos_adj=10 enable_msi=-1
+#options snd-hda-codec-ad1989 add options to setup names and pcm tags`
+blacklist snd-hda-codec-analog

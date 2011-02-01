@@ -1,0 +1,123 @@
+Playing WAVE 'pop.wav' : Signed 16 bit Little Endian, Rate 44100 Hz, Mono
+Plug PCM: Rate conversion PCM (48000, sformat=S16_LE)
+Converter: linear-interpolation
+Protocol version: 10002
+Its setup is:
+  stream       : PLAYBACK
+  access       : RW_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 1
+  rate         : 44100
+  exact rate   : 44100 (44100/1)
+  msbits       : 16
+  buffer_size  : 7526
+  period_size  : 940
+  period_time  : 21333
+  tstamp_mode  : NONE
+  period_step  : 1
+  avail_min    : 940
+  period_event : 0
+  start_threshold  : 7526
+  stop_threshold   : 7526
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 986447872
+Slave: Route conversion PCM (sformat=S32_LE)
+  Transformation table:
+    0 <- 0
+    1 <- 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S16_LE
+  subformat    : STD
+  channels     : 1
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 16
+  buffer_size  : 8192
+  period_size  : 1024
+  period_time  : 21333
+  tstamp_mode  : NONE
+  period_step  : 1
+  avail_min    : 1024
+  period_event : 0
+  start_threshold  : 8192
+  stop_threshold   : 8192
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 1073741824
+Slave: Soft volume PCM
+Control: PCM Playback Volume
+min_dB: -51
+max_dB: 0
+resolution: 256
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S32_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 32
+  buffer_size  : 8192
+  period_size  : 1024
+  period_time  : 21333
+  tstamp_mode  : NONE
+  period_step  : 1
+  avail_min    : 1024
+  period_event : 0
+  start_threshold  : 8192
+  stop_threshold   : 8192
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 1073741824
+Slave: Direct Stream Mixing PCM
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S32_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 32
+  buffer_size  : 8192
+  period_size  : 1024
+  period_time  : 21333
+  tstamp_mode  : NONE
+  period_step  : 1
+  avail_min    : 1024
+  period_event : 0
+  start_threshold  : 8192
+  stop_threshold   : 8192
+  silence_threshold: 0
+  silence_size : 0
+  boundary     : 1073741824
+Hardware PCM card 0 'HDA Intel MID' device 0 subdevice 0
+Its setup is:
+  stream       : PLAYBACK
+  access       : MMAP_INTERLEAVED
+  format       : S32_LE
+  subformat    : STD
+  channels     : 2
+  rate         : 48000
+  exact rate   : 48000 (48000/1)
+  msbits       : 32
+  buffer_size  : 8192
+  period_size  : 1024
+  period_time  : 21333
+  tstamp_mode  : ENABLE
+  period_step  : 1
+  avail_min    : 1024
+  period_event : 0
+  start_threshold  : 1
+  stop_threshold   : 1073741824
+  silence_threshold: 0
+  silence_size : 1073741824
+  boundary     : 1073741824
+  appl_ptr     : 0
+  hw_ptr       : 0
+Aborted by signal Interrupt...
