@@ -1,5 +1,5 @@
-*.[koam]
+*.[koam]*
 Kconfig
-Makefile*
 Mod*
 mod*
+*sw[op]
