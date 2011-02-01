@@ -1,0 +1,6 @@
+[submodule "alsa-driver"]
+	path = alsa-driver
+	url = git://git.alsa-project.org/alsa-driver.git
+[submodule "alsa-lib"]
+	path = alsa-lib
+	url = git://git.alsa-project.org/alsa-lib.git
