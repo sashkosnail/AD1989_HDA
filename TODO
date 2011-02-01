@@ -1,0 +1,2 @@
+1) Check why upon initialization device 00:1b (Audio) gets its pci id's from dev 00:1f (ISA bus host), this could be why the IRQ is failing, as they are sent to the wrong bus
+2)
