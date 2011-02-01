@@ -7,9 +7,9 @@ snd-hda-codec-$(CONFIG_SND_HDA_HWDEP) += hda_hwdep.o
 snd-hda-codec-$(CONFIG_SND_HDA_INPUT_BEEP) += hda_beep.o
 
 snd-hda-codec-analog-objs :=	patch_analog.o
-snd-hda-codec-idt-objs :=	patch_sigmatel.o
+#snd-hda-codec-idt-objs :=	patch_sigmatel.o
 snd-hda-codec-ad1989-objs :=	my_ad1989.o
-snd-hda-codec-realtek-objs :=	patch_realtek.o
+#snd-hda-codec-realtek-objs :=	patch_realtek.o
 
 # common driver
 obj-$(CONFIG_SND_HDA_INTEL) := snd-hda-codec.o
@@ -20,10 +20,10 @@ obj-$(CONFIG_SND_HDA_INTEL) += snd-hda-codec-analog.o
 obj-$(CONFIG_SND_HDA_INTEL) += snd-hda-codec-ad1989.o
 endif
 ifdef CONFIG_SND_HDA_CODEC_SIGMATEL
-obj-$(CONFIG_SND_HDA_INTEL) += snd-hda-codec-idt.o
+#obj-$(CONFIG_SND_HDA_INTEL) += snd-hda-codec-idt.o
 endif
 ifdef CONFIG_SND_HDA_CODEC_REALTEK
-obj-$(CONFIG_SND_HDA_INTEL) += snd-hda-codec-realtek.o
+#obj-$(CONFIG_SND_HDA_INTEL) += snd-hda-codec-realtek.o
 endif
 # this must be the last entry after codec drivers;
 # otherwise the codec patches won't be hooked before the PCI probe
