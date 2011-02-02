@@ -1,0 +1,38 @@
+# biosdecode 2.10
+ACPI 2.0 present.
+	OEM Identifier: Eurote
+	RSD Table 32-bit Address: 0x3FAEE0AC
+	XSD Table 64-bit Address: 0x000000003FAEE120
+PNP BIOS 1.0 present.
+	Event Notification: Not Supported
+	Real Mode 16-bit Code Address: F000:BA58
+	Real Mode 16-bit Data Address: 0040:0000
+	16-bit Protected Mode Code Address: 0x000FBA63
+	16-bit Protected Mode Data Address: 0x00000400
+	OEM Device Identifier: SST2400
+SMBIOS 2.4 present.
+	Structure Table Length: 584 bytes
+	Structure Table Address: 0x000FF4C0
+	Number Of Structures: 14
+	Maximum Structure Size: 105 bytes
+PCI Interrupt Routing 1.0 present.
+	Router ID: 00:1f.0
+	Exclusive IRQs: None
+	Compatible Router: 8086:122e
+	Slot Entry 1: ID 00:02, on-board
+	Slot Entry 2: ID 00:1a, on-board
+	Slot Entry 3: ID 00:1b, on-board
+	Slot Entry 4: ID 00:1c, on-board
+	Slot Entry 5: ID 00:1d, on-board
+	Slot Entry 6: ID 00:1e, on-board
+	Slot Entry 7: ID 00:1f, on-board
+	Slot Entry 8: ID 02:00, on-board
+	Slot Entry 9: ID 03:01, on-board
+	Slot Entry 10: ID 03:02, on-board
+	Slot Entry 11: ID 03:03, on-board
+	Slot Entry 12: ID 03:04, on-board
+	Slot Entry 13: ID 01:00, slot number 1
+	Slot Entry 14: ID 04:00, slot number 2
+	Slot Entry 15: ID 05:00, slot number 3
+	Slot Entry 16: ID 06:00, slot number 4
+	Slot Entry 17: ID 07:00, slot number 5

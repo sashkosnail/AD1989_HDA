@@ -1,2 +1,11 @@
 1) Check why upon initialization device 00:1b (Audio) gets its pci id's from dev 00:1f (ISA bus host), this could be why the IRQ is failing, as they are sent to the wrong bus
-2)
+1# This problem seems to be non existent as both 8086:8119 and 811b share the same sub-device and sub-vendor id: 8086:8119, that could still be an issue when it comes to IRQ routing
+
+2) Hard drive freeze
+2# This seems to be caused when the lspci probe is left active in 'less' mode, the other option of a PIC bus freez-up caused by access to the audio device was eliminated through testing
+
+3) The IRQ routing device on PCI bus 0 domain 0 seems to be @ 0000.00.1f which is the LPC bridge or the IDA bridge, biosdecode does not provide sufficient information
+
+4) The IRQ line and pin parts of the configuration register of the audio device(1b) seem to be non-initialized as tehy show 0, non the less the -vv option on lspci shows the correct IRQ is assigned
+
+5) The HDA controller seems to support MSI, as the capabilities of the device show, the questio is why no interrupts make it to or form the device
