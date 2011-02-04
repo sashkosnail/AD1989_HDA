@@ -42,10 +42,16 @@ MODULE_SUPPORTED_DEVICE("AD1989");
 #define AD1989_REV3 0x00100300
 #define AD1989_SUBID 0xBFD80000
 
-#define HP_DAC_NID 0x03
-#define MIC1_ADC_NID 0x09
-#define MIC2_ADC_NID 0x08
-#define MIC3_ADC_NID 0x0f
+#define HP1_DAC_NID 0x03
+#define HP2_DAC_NID 0x04
+#define MIC1_ADC_NID 0x08
+#define MIC2_ADC_NID 0x09
+static hda_nid_t ad1989_adc_nids[2] = {
+       MIC1_ADC_NID, MIC2_ADC_NID
+};
+static hda_nid_t ad1989_dac_nids[2] = {
+	HP1_DAC_NID, HP2_DAC_NID
+};
 #define BEEP_AMP_NID 0x10
 //comment to disable debug output
 #define LOCAL_DEBUG
@@ -66,6 +72,7 @@ struct ad1989_spec {
 	//capture
 	unsigned int num_adc;
 	hda_nid_t *adc_nids;
+	hda_nid_t *dac_nids;
 	//const struct hda_input_mux *input_mux; //label and id in hda_input_mux_item
  	const struct hda_channel_mode *channel_mode;
 	//PCM information
@@ -118,29 +125,31 @@ static int ad1989_hp_prep(struct hda_pcm_stream *hinfo, struct hda_codec *codec,
 				unsigned int stream_tag, unsigned int format,
 				struct snd_pcm_substream *substream)
 {
+	struct ad1989_spec *spec=codec->spec;
 #ifdef LOCAL_DEBUG
 	printk( KERN_INFO "PREP pcm playback stream_tag:%d, NID:%d format:%d\n"\
-			, stream_tag, HP_DAC_NID, format);
+			, stream_tag, spec->dac_nids[substream->number], format);
 #endif
-	snd_hda_codec_setup_stream(codec, HP_DAC_NID, stream_tag, 0, format);
+	snd_hda_codec_setup_stream(codec, spec->dac_nids[substream->number], stream_tag, 0, format);
 	return 0;
 }
 
 static int ad1989_hp_clean(struct hda_pcm_stream *hinfo, struct hda_codec *codec,
 				struct snd_pcm_substream *substream)
 {
+	struct ad1989_spec *spec=codec->spec;
 #ifdef LOCAL_DEBUG
 	printk( KERN_INFO "CLEANUP playback stream\n");
 #endif
-	snd_hda_codec_cleanup_stream(codec, HP_DAC_NID);
+	snd_hda_codec_cleanup_stream(codec, spec->dac_nids[substream->number]);
 	return 0;
 }
 
 static struct hda_pcm_stream ad1989_pcm_playback = {
-	.substreams = 1,
-	.channels_min = 2,
-	.channels_max = 2,
-	.nid = HP_DAC_NID,
+	.substreams = 2,
+	.channels_min = 1,
+	.channels_max = 4,
+	.nid = 0,
 	.ops = {
 		.open = ad1989_hp_open,
 		.close = ad1989_hp_close,
@@ -151,9 +160,6 @@ static struct hda_pcm_stream ad1989_pcm_playback = {
 /*
  * PCM stream callbacks and initialization: Capture
  */
-static hda_nid_t ad1989_adc_nids[3] =      {
-       MIC1_ADC_NID, MIC2_ADC_NID//, MIC3_ADC_NID
-       };
 
 static int ad1989_mic_open(struct hda_pcm_stream *hinfo, struct hda_codec *codec,
 				struct snd_pcm_substream *substream)
@@ -208,7 +214,7 @@ static int ad1989_mic_clean(struct hda_pcm_stream *hinfo, struct hda_codec *code
 static struct hda_pcm_stream ad1989_pcm_capture = {
 	.substreams = 2,
 	.channels_min = 1,
-	.channels_max = 6,
+	.channels_max = 4,
 	.nid = 0,	//blank for now
 	.ops = {
 		.open = ad1989_mic_open,
@@ -265,7 +271,7 @@ static struct hda_verb ad1989_init_verbs[] = {
 	{0x0D, AC_VERB_SET_AMP_GAIN_MUTE,	0xb0a7},
 	{0x0E, AC_VERB_SET_AMP_GAIN_MUTE,	0xb0a7},
 /*	
- * Port-A headphone path
+ * Port-A headphone 1 path
  * Path: 0x03->0x37->0x22->0x11
  * Pin Complex: 0x02214110
  * Pin Control: 0xC0 HP,OUT,Hi-Z
@@ -282,48 +288,49 @@ static struct hda_verb ad1989_init_verbs[] = {
 	{0x03, AC_VERB_SET_AMP_GAIN_MUTE,		0xb027},//set gain 0.0dB
 	{0x11, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//complete HP path
 /*
- * Port-B microphone 1 path
- * Path: 0x14->0x39->0x0c->0x08
+ * Port-B line-out 1 path
+ * Path: 0x04->0x30->0x2B->0x14
+ * Pin Complex: 0x02014111
+ * Pin Control: 0x40
+ */
+	{0x14, AC_VERB_SET_CONFIG_DEFAULT_BYTES_0,	0x11},//Association 1, seq 1
+	{0x14, AC_VERB_SET_CONFIG_DEFAULT_BYTES_1,	0x41},//green, no jack detect
+	{0x14, AC_VERB_SET_CONFIG_DEFAULT_BYTES_2,	0x01},//line out, 3.5mm
+	{0x14, AC_VERB_SET_CONFIG_DEFAULT_BYTES_3,	0x02},//external, front
+	{0x14, AC_VERB_SET_PIN_WIDGET_CONTROL, 		0x40},//OUT HiZ
+	{0x2b, AC_VERB_SET_AMP_GAIN_MUTE,		0x7000},
+	{0x2b, AC_VERB_SET_AMP_GAIN_MUTE,		0x7180},
+	{0x30, AC_VERB_SET_CONNECT_SEL,			0x01},
+	{0x04, AC_VERB_SET_POWER_STATE,			AC_PWRST_D0},
+	{0x04, AC_VERB_SET_AMP_GAIN_MUTE,		0xb027},
+	{0x14, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//complete Mic1 path
+/*
+ * Port-C microphone 1 path
+ * Path: 0x15->0x3A->0x0C->0x08
  * Pin Complex: 0x02a19120
  * Pin Control: 0x24
  */
-	{0x08, AC_VERB_SET_POWER_STATE, 		AC_PWRST_D0},//power up ADC0
-	{0x0C, AC_VERB_SET_CONNECT_SEL,			0x01},//select PortB boost, NID 0x38
+	{0x08, AC_VERB_SET_POWER_STATE, 		AC_PWRST_D0},//power up ADC1
+	{0x0C, AC_VERB_SET_CONNECT_SEL,			0x02},//select PortC boost, NID 0x39
 	{0x0C, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//unmute amp
-	{0x39, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_ZERO},//pre-amp @0db
-	{0x14, AC_VERB_SET_CONFIG_DEFAULT_BYTES_0,	0x20},//Association 2, seq 0
-	{0x14, AC_VERB_SET_CONFIG_DEFAULT_BYTES_1,	0x91},//pink, no jack detect
-	{0x14, AC_VERB_SET_CONFIG_DEFAULT_BYTES_2,	0xA1},//mic, 3.5mm
-	{0x14, AC_VERB_SET_CONFIG_DEFAULT_BYTES_3,	0x02},//external, front
-	{0x14, AC_VERB_SET_PIN_WIDGET_CONTROL, 		PIN_VREF80},//mic bias 80%5V
-	{0x14, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//complete Mic1 path
-/*
- * Port-C microphone 2 path
- * Path: 0x15->0x3A->0x0D->0x09
- * Pin Complex: 0x02a19121
- * Pin Control: 0x24
- */
-	{0x09, AC_VERB_SET_POWER_STATE, 		AC_PWRST_D0},//power up ADC1
-	{0x0D, AC_VERB_SET_CONNECT_SEL,			0x02},//select PortC boost, NID 0x39
-	{0x0D, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//unmute amp
 	{0x3A, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_ZERO},//pre-amp @0db
-	{0x15, AC_VERB_SET_CONFIG_DEFAULT_BYTES_0,	0x21},//Association 2, seq 1
+	{0x15, AC_VERB_SET_CONFIG_DEFAULT_BYTES_0,	0x20},//Association 2, seq 1
 	{0x15, AC_VERB_SET_CONFIG_DEFAULT_BYTES_1,	0x91},//pink, no jack detect
 	{0x15, AC_VERB_SET_CONFIG_DEFAULT_BYTES_2,	0xA1},//mic, 3.5mm
 	{0x15, AC_VERB_SET_CONFIG_DEFAULT_BYTES_3,	0x02},//external, front
 	{0x15, AC_VERB_SET_PIN_WIDGET_CONTROL, 		PIN_VREF80},//mic bias 80%5V
 	{0x15, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//complete Mic2 path
 /*
- * Port-E microphone 3 path
- * Path: 0x17->0x3C->0x0E->0x0F
- * Pin Complex: 0x02a19122
+ * Port-E microphone 2 path
+ * Path: 0x17->0x3C->0x0D->0x09
+ * Pin Complex: 0x02a19121
  * Pin Control: 0x24
  */
-	{0x0f, AC_VERB_SET_POWER_STATE, 		AC_PWRST_D0},//power up ADC2
-	{0x0E, AC_VERB_SET_CONNECT_SEL,			0x04},//select PortE boost, NID 0x3c
-	{0x0E, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//unmute amp
+	{0x09, AC_VERB_SET_POWER_STATE, 		AC_PWRST_D0},//power up ADC2
+	{0x0d, AC_VERB_SET_CONNECT_SEL,			0x04},//select PortE boost, NID 0x3c
+	{0x0d, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//unmute amp
 	{0x3C, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_ZERO},//pre-amp @0db
-	{0x17, AC_VERB_SET_CONFIG_DEFAULT_BYTES_0,	0x22},//Association 2, seq 1
+	{0x17, AC_VERB_SET_CONFIG_DEFAULT_BYTES_0,	0x21},//Association 2, seq 1
 	{0x17, AC_VERB_SET_CONFIG_DEFAULT_BYTES_1,	0x91},//pink, no jack detect
 	{0x17, AC_VERB_SET_CONFIG_DEFAULT_BYTES_2,	0xA1},//mic, 3.5mm
 	{0x17, AC_VERB_SET_CONFIG_DEFAULT_BYTES_3,	0x02},//external, front
@@ -340,14 +347,13 @@ static struct snd_kcontrol_new ad1989_mixers[] = {
 	HDA_CODEC_VOLUME("Headphone Playback Volume", 0x03, 0, HDA_OUTPUT),
 	HDA_CODEC_MUTE("Headphone Playback Switch", 0x11, 0, HDA_OUTPUT),
 	HDA_CODEC_VOLUME("Microphone 1 Capture Volume", 0x0C, 0, HDA_OUTPUT),
-	HDA_CODEC_MUTE("Microphone 1 Capture Switch", 0x14, 0, HDA_OUTPUT),
+	HDA_CODEC_MUTE("Microphone 1 Capture Switch", 0x15, 0, HDA_OUTPUT),
 	HDA_CODEC_VOLUME("Microphone 2 Capture Volume", 0x0D, 0, HDA_OUTPUT),
-	HDA_CODEC_MUTE("Microphone 2 Capture Switch", 0x15, 0, HDA_OUTPUT),
-	HDA_CODEC_VOLUME("Microphone 3 Capture Volume", 0x0E, 0, HDA_OUTPUT),
-	HDA_CODEC_MUTE("Microphone 3 Capture Switch", 0x17, 0, HDA_OUTPUT),
-	HDA_CODEC_VOLUME("Mic 1 Boost", 0x39, 0 ,HDA_OUTPUT),
-	HDA_CODEC_VOLUME("Mic 2 Boost", 0x3A, 0 ,HDA_OUTPUT),
-	HDA_CODEC_VOLUME("Mic 3 Boost", 0x3C, 0 ,HDA_OUTPUT),
+	HDA_CODEC_MUTE("Microphone 2 Capture Switch", 0x17, 0, HDA_OUTPUT),
+	HDA_CODEC_VOLUME("Line-out Playback Volume", 0x04, 0, HDA_OUTPUT),
+	HDA_CODEC_MUTE("Line-out Playback Switch", 0x14, 0, HDA_OUTPUT),
+	HDA_CODEC_VOLUME("Mic 1 Boost", 0x3a, 0 ,HDA_OUTPUT),
+	HDA_CODEC_VOLUME("Mic 2 Boost", 0x3c, 0 ,HDA_OUTPUT),
 	{}
 };
 #ifdef WITH_BEEP
@@ -411,7 +417,7 @@ static int ad1989_build_pcm(struct hda_codec *codec)
 	info->name = "AD1989 EuroPCM";
 	info->stream[SNDRV_PCM_STREAM_PLAYBACK] = ad1989_pcm_playback;
 	info->stream[SNDRV_PCM_STREAM_CAPTURE] = ad1989_pcm_capture;
-	info->stream[SNDRV_PCM_STREAM_PLAYBACK].nid = HP_DAC_NID;
+	info->stream[SNDRV_PCM_STREAM_PLAYBACK].nid = ad1989_dac_nids[0];
 	info->stream[SNDRV_PCM_STREAM_CAPTURE].nid = ad1989_adc_nids[0];
 	
 	return 0;
@@ -511,6 +517,7 @@ static int patch_ad1989(struct hda_codec *codec)
  */
 	spec->num_adc =		3;
 	spec->adc_nids =	ad1989_adc_nids;
+	spec->dac_nids =	ad1989_dac_nids;
 	spec->num_init_verbs = 	1;
 	spec->init_verbs[0] =	ad1989_init_verbs;
 	spec->num_mixers =	1;
