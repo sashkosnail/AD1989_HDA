@@ -1,0 +1,96 @@
+PCI Interrupt Routing Table at 0x000FE990
+-----------------------------------------
+0x00: Signature:          $PIR
+0x04: Version:            1.0
+0x06: Size:               304 bytes (17 entries)
+0x08: Device:             0:31:0
+0x0a: PCI Exclusive IRQs: 0x00000000
+0x0c: Compatible with:    0x122E8086 Intel 82371FB (Triton I)
+0x10: Miniport Data:      0x00000000
+0x1f: Checksum:           0x3D
+
+Entry 0: Device 0:2:0 Slot 0 (on-board)
+	INTA: 67h routable irqs: 11
+	INTB: 00h (not connected)
+	INTC: 00h (not connected)
+	INTD: 00h (not connected)
+Entry 1: Device 0:26:0 Slot 0 (on-board)
+	INTA: 63h routable irqs: 11
+	INTB: 00h (not connected)
+	INTC: 00h (not connected)
+	INTD: 00h (not connected)
+Entry 2: Device 0:27:0 Slot 0 (on-board)
+	INTA: 60h routable irqs: 11
+	INTB: 00h (not connected)
+	INTC: 00h (not connected)
+	INTD: 00h (not connected)
+Entry 3: Device 0:28:0 Slot 0 (on-board)
+	INTA: 60h routable irqs: 11
+	INTB: 61h routable irqs: 11
+	INTC: 62h routable irqs: 11
+	INTD: 63h routable irqs: 11
+Entry 4: Device 0:29:0 Slot 0 (on-board)
+	INTA: 62h routable irqs: 11
+	INTB: 63h routable irqs: 11
+	INTC: 64h routable irqs: 11
+	INTD: 65h routable irqs: 11
+Entry 5: Device 0:30:0 Slot 0 (on-board)
+	INTA: 66h routable irqs: 11
+	INTB: 66h routable irqs: 11
+	INTC: 66h routable irqs: 11
+	INTD: 00h (not connected)
+Entry 6: Device 0:31:0 Slot 0 (on-board)
+	INTA: 00h (not connected)
+	INTB: 00h (not connected)
+	INTC: 00h (not connected)
+	INTD: 00h (not connected)
+Entry 7: Device 2:0:0 Slot 0 (on-board)
+	INTA: 61h routable irqs: 11
+	INTB: 62h routable irqs: 11
+	INTC: 63h routable irqs: 11
+	INTD: 60h routable irqs: 11
+Entry 8: Device 3:1:0 Slot 0 (on-board)
+	INTA: 62h routable irqs: 11
+	INTB: 63h routable irqs: 11
+	INTC: 60h routable irqs: 11
+	INTD: 61h routable irqs: 11
+Entry 9: Device 3:2:0 Slot 0 (on-board)
+	INTA: 63h routable irqs: 11
+	INTB: 60h routable irqs: 11
+	INTC: 61h routable irqs: 11
+	INTD: 62h routable irqs: 11
+Entry 10: Device 3:3:0 Slot 0 (on-board)
+	INTA: 60h routable irqs: 11
+	INTB: 61h routable irqs: 11
+	INTC: 62h routable irqs: 11
+	INTD: 63h routable irqs: 11
+Entry 11: Device 3:4:0 Slot 0 (on-board)
+	INTA: 61h routable irqs: 11
+	INTB: 62h routable irqs: 11
+	INTC: 63h routable irqs: 11
+	INTD: 60h routable irqs: 11
+Entry 12: Device 1:0:0 Slot 1
+	INTA: 60h routable irqs: 11
+	INTB: 61h routable irqs: 11
+	INTC: 62h routable irqs: 11
+	INTD: 63h routable irqs: 11
+Entry 13: Device 4:0:0 Slot 2
+	INTA: 62h routable irqs: 11
+	INTB: 63h routable irqs: 11
+	INTC: 60h routable irqs: 11
+	INTD: 61h routable irqs: 11
+Entry 14: Device 5:0:0 Slot 3
+	INTA: 63h routable irqs: 11
+	INTB: 60h routable irqs: 11
+	INTC: 61h routable irqs: 11
+	INTD: 62h routable irqs: 11
+Entry 15: Device 6:0:0 Slot 4
+	INTA: 60h routable irqs: 11
+	INTB: 61h routable irqs: 11
+	INTC: 62h routable irqs: 11
+	INTD: 63h routable irqs: 11
+Entry 16: Device 7:0:0 Slot 5
+	INTA: 61h routable irqs: 11
+	INTB: 62h routable irqs: 11
+	INTC: 63h routable irqs: 11
+	INTD: 60h routable irqs: 11
