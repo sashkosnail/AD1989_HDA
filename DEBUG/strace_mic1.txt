@@ -1,10 +1,10 @@
 execve("/usr/bin/arecord", ["arecord", "-NDhw:0,0,1", "-fdat", "/home/user/alsa_mod/test/test1.w"...], [/* 28 vars */]) = 0
-brk(0)                                  = 0x911e000
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb78ad000
+brk(0)                                  = 0x96a0000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77a3000
 access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
 open("/etc/ld.so.cache", O_RDONLY)      = 3
 fstat64(3, {st_mode=S_IFREG|0644, st_size=76629, ...}) = 0
-mmap2(NULL, 76629, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb789a000
+mmap2(NULL, 76629, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7790000
 close(3)                                = 0
 open("/lib/librt.so.1", O_RDONLY)       = 3
 read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\300h\207\0004\0\0\0"..., 512) = 512
@@ -33,7 +33,7 @@ close(3)                                = 0
 open("/lib/libpthread.so.0", O_RDONLY)  = 3
 read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0`\274\205\0004\0\0\0"..., 512) = 512
 fstat64(3, {st_mode=S_IFREG|0755, st_size=138056, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7899000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb778f000
 mmap2(0x857000, 111100, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x857000
 mmap2(0x86f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17) = 0x86f000
 mmap2(0x871000, 4604, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x871000
@@ -52,90 +52,90 @@ fstat64(3, {st_mode=S_IFREG|0755, st_size=114320, ...}) = 0
 mmap2(0x8c4000, 115788, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x8c4000
 mmap2(0x8e0000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b) = 0x8e0000
 close(3)                                = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7898000
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7897000
-set_thread_area({entry_number:-1 -> 6, base_addr:0xb78976c0, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb778e000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb778d000
+set_thread_area({entry_number:-1 -> 6, base_addr:0xb778d6c0, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
 mprotect(0x848000, 8192, PROT_READ)     = 0
 mprotect(0x86f000, 4096, PROT_READ)     = 0
 mprotect(0x853000, 4096, PROT_READ)     = 0
 mprotect(0x8a9000, 4096, PROT_READ)     = 0
 mprotect(0x87d000, 4096, PROT_READ)     = 0
 mprotect(0x6b6000, 4096, PROT_READ)     = 0
-munmap(0xb789a000, 76629)               = 0
-set_tid_address(0xb7897728)             = 15968
-set_robust_list(0xb7897730, 0xc)        = 0
+munmap(0xb7790000, 76629)               = 0
+set_tid_address(0xb778d728)             = 23366
+set_robust_list(0xb778d730, 0xc)        = 0
 rt_sigaction(SIGRTMIN, {0x85b720, [], SA_SIGINFO}, NULL, 8) = 0
 rt_sigaction(SIGRT_1, {0x85b7a0, [], SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
 getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0
 uname({sys="Linux", node="eurotech.nca.uwo.ca", ...}) = 0
-brk(0)                                  = 0x911e000
-brk(0x913f000)                          = 0x913f000
-brk(0)                                  = 0x913f000
+brk(0)                                  = 0x96a0000
+brk(0x96c1000)                          = 0x96c1000
+brk(0)                                  = 0x96c1000
 open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE) = 3
 fstat64(3, {st_mode=S_IFREG|0644, st_size=99158720, ...}) = 0
-mmap2(NULL, 2097152, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7697000
-mmap2(NULL, 1179648, PROT_READ, MAP_PRIVATE, 3, 0xe25) = 0xb7577000
+mmap2(NULL, 2097152, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb758d000
+mmap2(NULL, 1179648, PROT_READ, MAP_PRIVATE, 3, 0xe25) = 0xb746d000
 close(3)                                = 0
 stat64("/usr/share/alsa/alsa.conf", {st_mode=S_IFREG|0644, st_size=9030, ...}) = 0
 open("/usr/share/alsa/alsa.conf", O_RDONLY) = 3
 fstat64(3, {st_mode=S_IFREG|0644, st_size=9030, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7576000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb746c000
 read(3, "#\n#  ALSA library configuration "..., 4096) = 4096
 read(3, "\t\t\t]\n\t\t\tdefault {\n\t\t\t\t@func refe"..., 4096) = 4096
 read(3, "\n\t}\n\tcard {\n\t\t@func refer\n\t\tname"..., 4096) = 838
 read(3, "", 4096)                       = 0
 read(3, "", 4096)                       = 0
 close(3)                                = 0
-munmap(0xb7576000, 4096)                = 0
+munmap(0xb746c000, 4096)                = 0
 futex(0x854060, FUTEX_WAKE_PRIVATE, 2147483647) = 0
 access("/etc/asound.conf", R_OK)        = 0
 open("/etc/asound.conf", O_RDONLY)      = 3
 fstat64(3, {st_mode=S_IFREG|0644, st_size=159, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7576000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb746c000
 read(3, "#\n# Place your global alsa-lib c"..., 4096) = 159
 read(3, "", 4096)                       = 0
 read(3, "", 4096)                       = 0
 close(3)                                = 0
-munmap(0xb7576000, 4096)                = 0
+munmap(0xb746c000, 4096)                = 0
 access("/home/user/.asoundrc", R_OK)    = 0
 open("/home/user/.asoundrc", O_RDONLY)  = 3
 fstat64(3, {st_mode=S_IFREG|0664, st_size=381, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7576000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb746c000
 read(3, "#defines the required PCM setup\n"..., 4096) = 381
 read(3, "", 4096)                       = 0
 read(3, "", 4096)                       = 0
 close(3)                                = 0
-munmap(0xb7576000, 4096)                = 0
+munmap(0xb746c000, 4096)                = 0
 access("/home/user/alsa_mod/confs/asoundrc.conf", R_OK) = 0
 open("/home/user/alsa_mod/confs/asoundrc.conf", O_RDONLY) = 3
 fstat64(3, {st_mode=S_IFREG|0664, st_size=381, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7576000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb746c000
 read(3, "#defines the required PCM setup\n"..., 4096) = 381
 read(3, "", 4096)                       = 0
 read(3, "", 4096)                       = 0
 close(3)                                = 0
-munmap(0xb7576000, 4096)                = 0
+munmap(0xb746c000, 4096)                = 0
 open("/dev/snd/controlC0", O_RDONLY|O_CLOEXEC) = 3
 fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
-ioctl(3, UI_DEV_CREATE, 0xbfb0a1a4)     = 0
+ioctl(3, UI_DEV_CREATE, 0xbfe34204)     = 0
 close(3)                                = 0
 open("/dev/snd/controlC0", O_RDWR|O_CLOEXEC) = 3
 fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
-ioctl(3, USBDEVFS_CONTROL or USBDEVFS_CONTROL32, 0xbfb0a378) = 0
-ioctl(3, 0x40045532, 0xbfb0a3a4)        = 0
+ioctl(3, USBDEVFS_CONTROL or USBDEVFS_CONTROL32, 0xbfe343d8) = 0
+ioctl(3, 0x40045532, 0xbfe34404)        = 0
 open("/dev/snd/pcmC0D0c", O_RDWR|O_NONBLOCK|O_CLOEXEC) = 4
 fcntl64(4, F_SETFD, FD_CLOEXEC)         = 0
-ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfb0a404) = 0
+ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfe34464) = 0
 close(3)                                = 0
-ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfb0a1f8) = 0
+ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfe34258) = 0
 fcntl64(4, F_GETFL)                     = 0x80802 (flags O_RDWR|O_NONBLOCK|O_CLOEXEC)
-ioctl(4, AGPIOC_INFO, 0xbfb0a1f4)       = 0
-clock_gettime(CLOCK_MONOTONIC, {2019, 70095773}) = 0
-ioctl(4, AGPIOC_SETUP, 0xbfb0a1ec)      = 0
-mmap2(NULL, 4096, PROT_READ, MAP_SHARED, 4, 0x80000) = 0xb7576000
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_SHARED, 4, 0x81000) = 0xb7575000
-ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfb0a730) = 0
+ioctl(4, AGPIOC_INFO, 0xbfe34254)       = 0
+clock_gettime(CLOCK_MONOTONIC, {4021, 457653417}) = 0
+ioctl(4, AGPIOC_SETUP, 0xbfe3424c)      = 0
+mmap2(NULL, 4096, PROT_READ, MAP_SHARED, 4, 0x80000) = 0xb746c000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_SHARED, 4, 0x81000) = 0xb746b000
+ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfe34790) = 0
 fcntl64(4, F_GETFL)                     = 0x80802 (flags O_RDWR|O_NONBLOCK|O_CLOEXEC)
 fcntl64(4, F_SETFL, O_RDWR|O_NONBLOCK|O_CLOEXEC) = 0
 rt_sigaction(SIGINT, {0x804dc40, [INT], SA_RESTART}, {SIG_IGN, [], 0}, 8) = 0
@@ -144,11 +144,11 @@ rt_sigaction(SIGABRT, {0x804dc40, [ABRT], SA_RESTART}, {SIG_DFL, [], 0}, 8) = 0
 rt_sigaction(SIGUSR1, {0x804a900, [USR1], SA_RESTART}, {SIG_DFL, [], 0}, 8) = 0
 open("/usr/share/locale/locale.alias", O_RDONLY) = 3
 fstat64(3, {st_mode=S_IFREG|0644, st_size=2512, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7574000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb746a000
 read(3, "# Locale name alias data base.\n#"..., 4096) = 2512
 read(3, "", 4096)                       = 0
 close(3)                                = 0
-munmap(0xb7574000, 4096)                = 0
+munmap(0xb746a000, 4096)                = 0
 open("/usr/share/locale/en_CA.utf8/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
 open("/usr/share/locale/en_CA/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
 open("/usr/share/locale/en.utf8/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
@@ -158,22 +158,22 @@ write(2, "Signed 16 bit Little Endian, ", 29) = 29
 write(2, "Rate 48000 Hz, ", 15)         = 15
 write(2, "Stereo", 6)                   = 6
 write(2, "\n", 1)                       = 1
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4110, 0xbfb07dc4)        = 0
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4110, 0xbfb08370)        = 0
-ioctl(4, 0xc25c4111, 0xbfb08370)        = 0
-ioctl(4, 0xc0684113, 0xbfb08224)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4110, 0xbfe31e24)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4110, 0xbfe323d0)        = 0
+ioctl(4, 0xc25c4111, 0xbfe323d0)        = 0
+ioctl(4, 0xc0684113, 0xbfe32284)        = 0
 ioctl(4, 0x4140, 0x360d3ed)             = 0
-ioctl(0, SNDCTL_TMR_TIMEBASE or TCGETS, 0xbfb085d8) = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(0, SNDCTL_TMR_TIMEBASE or TCGETS, 0xbfe32638) = -1 ENOTTY (Inappropriate ioctl for device)
 fcntl64(0, F_GETFL)                     = 0x8000 (flags O_RDONLY|O_LARGEFILE)
 fcntl64(0, F_SETFL, O_RDONLY|O_NONBLOCK|O_LARGEFILE) = 0
 ioctl(0, SNDCTL_TMR_START or TCSETS, {B75 -opost isig -icanon -echo ...}) = -1 ENOTTY (Inappropriate ioctl for device)
@@ -184,742 +184,862 @@ write(3, "fmt \20\0\0\0", 8)            = 8
 write(3, "\1\0\2\0\200\273\0\0\0\356\2\0\4\0\20\0", 16) = 16
 write(3, "data\0\0\0\200", 8)           = 8
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = -1 EAGAIN (Resource temporarily unavailable)
+ioctl(4, 0x800c4151, 0xbfe32674)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "k\376k\376n\376t\376q\376q\376e\376q\376r\376v\376r\376w\376o\376t\376y\376y\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\373\377\375\377\362\377\361\377\364\377\4\0\372\377\371\377\362\377\374\377\360\377\356\377\365\377\364\377\355\377\366\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\355\0\367\0\355\0\362\0\357\0\357\0\354\0\362\0\347\0\360\0\353\0\347\0\346\0\342\0\344\0\352\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "[\2T\2T\2[\2M\2S\2[\2W\2R\2M\2M\2P\2U\2V\2K\2L\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\303\377\311\377\311\377\304\377\306\377\310\377\307\377\312\377\313\377\310\377\275\377\303\377\301\377\305\377\273\377\313\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\246\376\253\376\241\376\250\376\243\376\246\376\242\376\234\376\242\376\250\376\233\376\241\376\245\376\251\376\255\376\243\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, ",\2.\2*\2+\0027\2.\0022\0024\0022\0020\2.\0024\2.\2)\2(\2$\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\22\0\17\0\t\0\24\0\22\0\24\0\t\0\6\0\v\0\r\0\f\0\n\0\3\0\1\0\0\0\5\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\253\376\261\376\257\376\260\376\265\376\254\376\263\376\265\376\271\376\272\376\260\376\263\376\253\376\256\376\260\376\263\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\355\375\350\375\353\375\350\375\345\375\344\375\356\375\362\375\356\375\361\375\364\375\363\375\365\375\352\375\360\375\352\375"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\177\377|\377\210\377\203\377\210\377\202\377\204\377\213\377\204\377\212\377\217\377\220\377\233\377\221\377\213\377\221\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "V\1U\1b\1e\1[\1U\1R\1V\1K\1X\1K\1N\1F\1U\1J\1I\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\24\376\23\376\30\376\24\376\32\376\26\376\35\376\32\376$\376\27\376\31\376\23\376\25\376\22\376\"\376\35\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\377\377\1\0\364\377\376\377\5\0\6\0\0\0\5\0\3\0\2\0\0\0\374\377\2\0\377\377\n\0\376\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\311\1\307\1\310\1\311\1\317\1\310\1\306\1\301\1\306\1\301\1\307\1\317\1\314\1\311\1\313\1\310\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "v\377w\377o\377p\377u\377t\377m\377y\377r\377f\377r\377n\377l\377b\377n\377f\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\240\377\225\377\233\377\225\377\240\377\233\377\234\377\232\377\225\377\224\377\232\377\225\377\242\377\233\377\237\377\233\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "W\0]\0U\0W\0Z\0a\0Z\0^\0f\0f\0]\0`\0Y\0\\\0]\0\\\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\304\377\306\377\300\377\276\377\267\377\273\377\267\377\300\377\271\377\275\377\271\377\276\377\265\377\257\377\264\377\262\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\232\375\235\375\230\375\227\375\243\375\243\375\233\375\240\375\242\375\234\375\247\375\244\375\253\375\244\375\260\375\253\375"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\305\1\277\1\304\1\305\1\303\1\300\1\267\1\277\1\305\1\303\1\304\1\301\1\303\1\306\1\304\1\306\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\200\1~\1\201\1\207\1\203\1~\1\202\1}\1\213\1\214\1\204\1\210\1\212\1\215\1\207\1\215\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "/\377-\377/\377,\377-\3770\3771\377/\377/\377&\377,\377,\377/\377,\377/\3771\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\317\2\320\2\304\2\312\2\305\2\305\2\306\2\313\2\304\2\304\2\320\2\313\2\311\2\312\2\311\2\307\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "M\0H\0H\0P\0P\0R\0L\0K\0J\0H\0V\0R\0H\0S\0J\0R\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, ">\376@\376=\376;\3768\3767\376>\376<\376:\376;\376.\376-\376+\376$\376.\3766\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\26\377\17\377\22\377\r\377\27\377\26\377\25\377\34\377\27\377\25\377\35\377\23\377\34\377\34\377\"\377\33\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\1\1\1\1\2\1\372\0\374\0\374\0\3\1\376\0\v\1\7\1\7\1\f\1\v\1\5\1\v\1\10\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "p\3l\3i\3i\3m\3t\3k\3o\3l\3l\3k\3q\3p\3s\3n\3r\3"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "*\3762\376(\376+\376.\376,\3764\3768\3765\376-\3763\3769\3761\3762\3762\376-\376"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, ",\376/\376\23\376\21\376\26\376\21\376/\376(\376S\376T\376{\376|\376\\\376c\376@\376A\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\224\1\222\1\216\1\212\1\204\1\206\1\205\1\207\1\202\1z\1\207\1\202\1\212\1\206\1\201\1\177\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "w\1z\1z\1\200\1|\1p\1z\1\202\1v\1r\1}\1l\1r\1\203\1{\1t\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\241\0\231\0\237\0\224\0\226\0\233\0\245\0\246\0\242\0\236\0\235\0\251\0\246\0\254\0\244\0\235\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "<\1>\1D\1H\1E\1?\1>\1?\1@\1;\1E\1C\1:\1C\1<\1:\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\332\375\341\375\336\375\332\375\341\375\333\375\323\375\324\375\322\375\317\375\322\375\321\375\321\375\324\375\325\375\334\375"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\251\0\242\0\264\0\261\0\263\0\264\0\260\0\257\0\256\0\260\0\261\0\254\0\263\0\262\0\260\0\257\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\20\376\23\376\32\376\25\376\f\376\17\376\5\376\10\376\377\375\374\375\364\375\356\375\366\375\365\375\365\375\357\375"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\235\377\234\377\252\377\247\377\237\377\250\377\256\377\257\377\263\377\262\377\254\377\247\377\261\377\257\377\267\377\257\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "N\0T\0P\0R\0H\0G\0K\0G\0=\0>\0005\0005\0007\0006\0,\0/\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\254\0\245\0\247\0\240\0\250\0\251\0\255\0\240\0\245\0\245\0\252\0\246\0\255\0\250\0\240\0\243\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "P\377Q\377N\377L\377E\377M\377J\377O\377G\377I\377Q\377L\377H\377B\377L\377L\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\332\0\345\0\332\0\336\0\326\0\337\0\341\0\346\0\343\0\353\0\341\0\350\0\346\0\361\0\370\0\362\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "`\0h\0d\0e\0]\0c\0^\0V\0]\0Y\0P\0Y\0`\0Y\0]\0b\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\244\0\235\0\236\0\237\0\241\0\250\0\236\0\254\0\237\0\237\0\247\0\244\0\233\0\243\0\245\0\243\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\203\376\201\376\203\376\204\376\213\376\206\376\213\376\201\376\204\376\204\376\203\376\204\376\215\376\205\376\205\376\210\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\t\1\1\1\7\1\5\1\3\1\10\1\375\0\376\0\375\0\1\1\1\1\370\0\375\0\377\0\375\0\371\0"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\35\377\26\377\25\377\"\377 \377%\377\27\377\30\377!\377 \377\35\377\34\377)\377'\377!\377 \377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\275\377\274\377\275\377\273\377\301\377\271\377\301\377\272\377\265\377\270\377\274\377\270\377\276\377\265\377\273\377\266\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, ":\0009\0008\0A\0?\0A\0?\0>\0C\0>\0B\0>\0006\0009\0E\0B\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\304\0\277\0\303\0\311\0\302\0\300\0\277\0\277\0\276\0\276\0\304\0\302\0\311\0\300\0\310\0\303\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\273\0\274\0\271\0\300\0\266\0\277\0\264\0\273\0\270\0\301\0\272\0\272\0\265\0\276\0\267\0\274\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "n\377e\377e\377o\377k\377p\377f\377m\377X\377]\377Y\377]\377`\377]\377k\377a\377"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\346\374\342\374\343\374\331\374\347\374\334\374\352\374\344\374\347\374\342\374\342\374\337\374\337\374\326\374\341\374\344\374"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\177\0|\0|\0\205\0\177\0\177\0\206\0\202\0\207\0\200\0|\0\204\0\206\0{\0\203\0\206\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\270\377\272\377\276\377\276\377\306\377\306\377\305\377\305\377\300\377\310\377\315\377\314\377\330\377\325\377\332\377\346\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\375\1\364\1\373\1\354\1\357\1\360\1\357\1\346\1\352\1\342\1\342\1\341\1\345\1\341\1\352\1\351\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "G\1F\1>\1F\1E\1G\1K\1H\1C\1>\1I\1F\1F\1T\1P\1R\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\260\0\266\0\265\0\255\0\261\0\261\0\267\0\265\0\275\0\262\0\271\0\270\0\267\0\271\0\273\0\267\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "9\3751\375,\375)\3752\375+\3752\3751\3750\375)\375/\375*\375*\375$\375)\375\"\375"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\257\1\246\1\254\1\241\1\241\1\244\1\255\1\250\1\257\1\253\1\260\1\253\1\251\1\242\1\255\1\246\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "^\1f\1r\1o\1q\1v\1v\1s\1v\1z\1t\1\200\1p\1{\1}\1v\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\203\0\203\0\202\0{\0\202\0\206\0\210\0\205\0\203\0\205\0\177\0\202\0{\0}\0\177\0\202\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\345\0\335\0\342\0\336\0\325\0\335\0\325\0\323\0\332\0\331\0\321\0\320\0\330\0\333\0\320\0\326\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\3\376\376\375\1\376\0\376\7\376\f\376\4\376\n\376\5\376\2\376\7\376\3\376\4\376\10\376\7\376\t\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\265\376\257\376\264\376\264\376\256\376\255\376\256\376\257\376\263\376\262\376\262\376\265\376\266\376\267\376\270\376\302\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\306\377\307\377\275\377\305\377\314\377\306\377\274\377\277\377\272\377\273\377\263\377\266\377\303\377\267\377\276\377\264\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "I\377C\377B\377@\377=\377=\377=\377@\3779\3779\377?\377<\377B\377=\377>\377<\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "O\2P\2Q\2R\2S\2N\2X\2Y\2[\2V\2a\2U\2Z\2_\2b\2`\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\34\377\26\377\22\377\33\377\26\377\35\377\25\377\31\377#\377%\377 \377#\377'\377$\377 \377'\377"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "Z\0^\0a\0Y\0[\0Z\0[\0_\0]\0_\0S\0U\0\\\0X\0O\0P\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\334\376\331\376\343\376\334\376\324\376\330\376\323\376\337\376\342\376\342\376\334\376\347\376\353\376\345\376\341\376\347\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\376\377\370\377\376\377\371\377\377\377\0\0\365\377\371\377\5\0\372\377\10\0\7\0\n\0\t\0\21\0\t\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "Z\377Y\377Z\377f\377X\377[\377]\377[\377h\377g\377e\377i\377Y\377`\377]\377U\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\225\1\225\1\224\1\217\1\235\1\221\1\235\1\224\1\221\1\226\1\225\1\223\1\217\1\217\1\225\1\220\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "}\377|\377\200\377}\377\203\377~\377\177\377z\377\203\377\210\377\210\377\220\377\210\377\177\377\202\377\201\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\343\1\343\1\345\1\342\1\350\1\346\1\346\1\355\1\341\1\332\1\341\1\330\1\341\1\341\1\342\1\341\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "F\0009\0D\0P\0J\0G\0E\0I\0B\0E\0N\0R\0I\0E\0;\0;\0"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\t\0\v\0\f\0\n\0\17\0\n\0\16\0\32\0\22\0\25\0\23\0\20\0\17\0\21\0\31\0\27\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\246\376\243\376\247\376\245\376\252\376\256\376\244\376\252\376\253\376\266\376\262\376\260\376\254\376\246\376\261\376\264\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\234\2\234\2\245\2\241\2\237\2\243\2\237\2\230\2\240\2\244\2\233\2\243\2\230\2\233\2\232\2\247\2"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\374\376\372\376\5\377\377\376\6\377\3\377\7\377\7\377\v\377\377\376\7\377\n\377\n\377\f\377\5\377\377\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "P\376U\376[\376P\376U\376W\376W\376Z\376L\376I\376E\376J\376:\376D\376<\3766\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\0\377\375\376\2\377\0\377\373\376\0\377\0\377\370\376\376\376\376\376\372\376\370\376\373\376\372\376\372\376\374\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\30\1\"\1\36\1\"\1\32\1!\1'\1*\1&\1(\1&\1.\1+\1,\1'\0014\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\v\0\16\0\21\0\7\0\24\0\21\0\r\0\v\0\r\0\10\0\3\0\0\0\t\0\t\0\n\0\2\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\371\1\1\2\376\1\371\1\370\1\376\1\362\1\365\1\366\1\370\1\377\1\376\1\0\2\1\2\0\2\2\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\261\377\261\377\270\377\273\377\266\377\267\377\301\377\272\377\277\377\275\377\306\377\300\377\316\377\305\377\304\377\277\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\325\377\326\377\306\377\311\377\312\377\310\377\313\377\314\377\313\377\320\377\300\377\306\377\276\377\275\377\262\377\261\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\226\374\221\374\221\374\203\374\211\374\211\374\210\374\205\374\202\374}\374y\374w\374{\374\203\374\177\374}\374"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\3\0\6\0\3\0\375\377\t\0\17\0\7\0\5\0\7\0\16\0\16\0\f\0\23\0\16\0\21\0\26\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\24\1\22\1\24\1\30\1\20\1\20\1\25\1\20\1\24\1\24\1\27\1\22\1\22\1\17\1\27\1\23\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\257\377\254\377\256\377\250\377\260\377\251\377\250\377\252\377\256\377\263\377\266\377\256\377\246\377\255\377\237\377\244\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\336\0\342\0\341\0\333\0\327\0\330\0\337\0\334\0\327\0\326\0\325\0\323\0\316\0\326\0\323\0\331\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "B\3769\376:\376:\376I\376G\376D\376B\376>\376E\376I\376B\376B\376H\376I\376M\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\325\0\332\0\323\0\336\0\340\0\346\0\340\0\335\0\346\0\342\0\345\0\344\0\341\0\344\0\337\0\341\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\264\377\260\377\271\377\272\377\254\377\262\377\271\377\276\377\263\377\271\377\257\377\252\377\267\377\262\377\252\377\263\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "-\3775\377+\3772\3774\3771\377:\377:\3774\3776\3779\377=\3775\377;\3776\377;\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\315\377\317\377\311\377\307\377\316\377\310\377\314\377\311\377\302\377\306\377\273\377\316\377\305\377\310\377\306\377\307\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "P\1Q\1O\1Q\1V\1M\1P\1W\1N\1O\1Q\1S\1M\1P\1T\1E\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\250\0\254\0\252\0\253\0\261\0\255\0\265\0\256\0\255\0\247\0\266\0\266\0\256\0\263\0\257\0\261\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "_\3o\3d\3c\3]\3h\3X\3V\3]\3Y\3V\3]\3Z\3b\3W\3_\3"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\315\377\323\377\314\377\320\377\320\377\321\377\315\377\321\377\322\377\320\377\336\377\332\377\341\377\342\377\344\377\353\377"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\262\374\267\374\266\374\265\374\257\374\253\374\242\374\255\374\271\374\254\374\261\374\264\374\247\374\252\374\274\374\257\374"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "`\376h\376j\376e\376b\376_\376]\376c\376b\376\\\376]\376[\376b\376^\376X\376`\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "F\2?\2>\2?\2F\2I\2H\2T\2M\2N\2O\2Q\2P\2M\2J\2X\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\345\376\332\376\356\376\340\376\344\376\335\376\351\376\341\376\345\376\342\376\345\376\350\376\341\376\342\376\357\376\342\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\202\1\203\1\200\1|\1\201\1\203\1}\1\204\1\206\1\213\1\205\1\201\1u\1r\1{\1o\1"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\352\375\334\375\344\375\331\375\344\375\346\375\356\375\351\375\337\375\337\375\351\375\331\375\332\375\325\375\333\375\331\375"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\226\2\243\2\237\2\246\2\255\2\247\2\250\2\247\2\252\2\251\2\254\2\261\2\241\2\242\2\253\2\243\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "p\377j\377r\377j\377m\377v\377k\377e\377m\377o\377i\377i\377m\377l\377f\377k\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "`\0Y\0j\0a\0Z\0V\0e\0Z\0`\0_\0]\0`\0p\0a\0d\0_\0"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "k\376j\376k\376n\376k\376k\376p\376n\376k\376k\376n\376f\376m\376s\376\200\376}\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\35\0\31\0\36\0\32\0\33\0\33\0\31\0\31\0#\0\34\0\24\0\"\0\31\0 \0\27\0\33\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "f\376i\376l\376f\376g\376e\376c\376e\376Z\376j\376e\376f\376g\376l\376k\376k\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\311\1\304\1\304\1\276\1\277\1\277\1\277\1\276\1\305\1\306\1\301\1\276\1\300\1\272\1\301\1\302\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\22\2\20\2\32\2\f\2\35\2\32\2\37\2\36\2\"\2\36\2\20\2\20\2\t\2\7\2\4\2\5\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\206\376\211\376\205\376\207\376\221\376\211\376\215\376\220\376\223\376\216\376\232\376\217\376\226\376\222\376\217\376\224\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "F\376K\376@\376I\376M\376I\376>\376A\376D\376F\376I\376L\376C\376M\376E\376C\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\n\377\t\377\25\377\22\377\t\377\21\377\6\377\1\377\2\377\375\376\376\376\366\376\367\376\367\376\366\376\367\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\220\1\227\1\227\1\227\1\223\1\233\1\222\1\237\1\213\1\222\1\224\1\242\1\210\1\221\1\207\1\213\1"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\226\0\225\0\231\0\234\0\240\0\235\0\236\0\235\0\241\0\236\0\237\0\237\0\246\0\241\0\242\0\245\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "_\377\\\377c\377\\\377`\377g\377a\377d\377]\377]\377`\377c\377Y\377e\377W\377d\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "W\377S\377^\377S\377f\377]\377]\377U\377h\377`\377_\377T\377n\377f\377j\377`\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "^\377[\377j\377d\377l\377n\377y\377v\377u\377x\377\177\377\201\377\207\377\205\377\215\377\211\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\353\376\355\376\353\376\350\376\360\376\357\376\353\376\366\376\363\376\365\376\366\376\372\376\357\376\361\376\355\376\367\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "x\1r\1l\1u\1p\1u\1n\1o\1i\1o\1q\1q\1i\1h\1i\1i\1"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\20\376\25\376\22\376\21\376\24\376\27\376\23\376\24\376\31\376\34\376\35\376#\376\35\376\25\376\35\376\33\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\303\0\300\0\304\0\275\0\274\0\302\0\272\0\300\0\300\0\276\0\277\0\306\0\273\0\304\0\301\0\273\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\266\377\260\377\254\377\261\377\247\377\270\377\255\377\265\377\263\377\272\377\262\377\271\377\257\377\261\377\265\377\275\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "u\0}\0t\0v\0p\0p\0q\0m\0p\0j\0t\0u\0l\0o\0m\0o\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\342\2\354\2\344\2\346\2\343\2\346\2\345\2\351\2\354\2\352\2\347\2\344\2\354\2\353\2\340\2\350\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\326\376\327\376\322\376\325\376\315\376\305\376\317\376\310\376\277\376\276\376\275\376\310\376\303\376\276\376\305\376\274\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\27\376\31\376\35\376\35\376$\376\34\376\"\376 \376.\376,\376+\376,\376/\376.\376;\376<\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "C\376>\376F\376C\376F\376C\376<\376>\376H\376E\376>\376@\376C\376D\376C\376?\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "S\1T\1`\1^\1E\1R\1Q\1J\1K\1L\1F\1K\1D\1N\1@\1B\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\16\2\16\2\v\2\20\2\4\2\20\2\3\2\v\2\7\2\6\2\v\2\2\2\1\2\3\2\10\2\v\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\177\376\211\376\205\376|\376\202\376\211\376\207\376\212\376\214\376\220\376\224\376\217\376\221\376\217\376\222\376\223\376"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\347\375\336\375\344\375\341\375\341\375\346\375\321\375\326\375\331\375\323\375\314\375\325\375\304\375\306\375\320\375\311\375"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\2\1\372\0\372\0\370\0\374\0\365\0\370\0\374\0\363\0\367\0\365\0\365\0\367\0\3\1\372\0\374\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\260\2\255\2\262\2\261\2\266\2\257\2\264\2\263\2\262\2\260\2\256\2\257\2\261\2\265\2\262\2\255\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "5\1@\1-\0012\0017\0012\0012\0016\1(\1-\0012\1*\0011\1:\0014\0014\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\"\376+\376-\3760\3767\376>\376<\376<\376;\376>\376I\376J\376V\376R\376Q\376O\376"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\23\0\t\0\f\0\16\0\27\0\7\0\22\0\21\0\21\0\27\0 \0\36\0\35\0\30\0\31\0\32\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, " \1\34\1\24\1\25\1\26\1\22\1\t\1\n\1\20\1\22\1\22\1\17\1\n\1\24\1\21\1\f\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\253\0\255\0\242\0\244\0\257\0\260\0\255\0\257\0\246\0\246\0\252\0\245\0\241\0\252\0\256\0\252\0"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "5\0001\0/\0002\0.\0*\0-\0001\0002\0/\0008\0001\0004\0.\0007\0000\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\304\377\300\377\300\377\300\377\305\377\300\377\304\377\276\377\275\377\274\377\312\377\310\377\312\377\306\377\314\377\303\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "j\377k\377j\377b\377]\377b\377i\377e\377i\377e\377l\377g\377q\377n\377q\377p\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "S\376M\376T\376M\376L\376I\376V\376R\376Y\376P\376Q\376N\376O\376N\376O\376E\376"..., 16384) = 16384
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\33\1\33\1\32\1\32\1\33\1\33\1&\1\"\1\"\1'\1%\1(\1'\1)\1!\1!\1"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "%\2$\2&\2,\0023\2=\2:\2=\0029\2;\2+\0021\2\35\2%\2\35\2\31\2"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\275\0\264\0\262\0\257\0\264\0\277\0\262\0\271\0\273\0\266\0\250\0\255\0\253\0\252\0\251\0\251\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
+read(0, "", 1)                          = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\37\0\30\0\34\0\26\0\25\0\27\0\33\0\26\0\23\0\22\0\32\0\25\0\37\0\16\0\17\0\10\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\305\377\276\377\301\377\276\377\273\377\270\377\272\377\265\377\273\377\301\377\302\377\273\377\311\377\306\377\300\377\303\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
+write(3, "\376\376\370\376\377\376\377\376\7\377\7\377\20\377\23\377\37\377\27\377,\377,\377+\377.\3774\377-\377"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfb08614)        = 0
+ioctl(4, 0x800c4151, 0xbfe32674)        = 0
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = ? ERESTART_RESTARTBLOCK (To be restarted)
 --- SIGTERM (Terminated) @ 0 (0) ---
 futex(0x84b8e0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
@@ -929,15 +1049,15 @@ open("/usr/share/locale/en.utf8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No 
 open("/usr/share/locale/en/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
 write(2, "Aborted by signal Terminated...\n", 32) = 32
 _llseek(3, 4, [4], SEEK_SET)            = 0
-write(3, "$\200!\0", 4)                 = 4
+write(3, "$\0'\0", 4)                   = 4
 _llseek(3, 36, [36], SEEK_SET)          = 0
-write(3, "data\0\200!\0", 8)            = 8
+write(3, "data\0\0'\0", 8)              = 8
 close(3)                                = 0
-ioctl(4, 0x4143, 0xb78ad828)            = 0
+ioctl(4, 0x4143, 0xb77a3828)            = 0
 ioctl(4, 0x4112, 0)                     = 0
 close(4)                                = 0
-munmap(0xb7576000, 4096)                = 0
-munmap(0xb7575000, 4096)                = 0
-ioctl(0, SNDCTL_TMR_TIMEBASE or TCGETS, 0xbfb07fb8) = -1 ENOTTY (Inappropriate ioctl for device)
+munmap(0xb746c000, 4096)                = 0
+munmap(0xb746b000, 4096)                = 0
+ioctl(0, SNDCTL_TMR_TIMEBASE or TCGETS, 0xbfe32018) = -1 ENOTTY (Inappropriate ioctl for device)
 ioctl(0, SNDCTL_TMR_START or TCSETS, {B0 -opost isig -icanon -echo ...}) = -1 ENOTTY (Inappropriate ioctl for device)
 exit_group(1)                           = ?

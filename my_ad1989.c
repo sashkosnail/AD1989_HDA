@@ -300,10 +300,10 @@ static struct hda_verb ad1989_init_verbs[] = {
 	{0x14, AC_VERB_SET_PIN_WIDGET_CONTROL, 		0x40},//OUT HiZ
 	{0x2b, AC_VERB_SET_AMP_GAIN_MUTE,		0x7000},
 	{0x2b, AC_VERB_SET_AMP_GAIN_MUTE,		0x7180},
-	{0x30, AC_VERB_SET_CONNECT_SEL,			0x01},
+	{0x30, AC_VERB_SET_CONNECT_SEL,			0x1},
 	{0x04, AC_VERB_SET_POWER_STATE,			AC_PWRST_D0},
 	{0x04, AC_VERB_SET_AMP_GAIN_MUTE,		0xb027},
-	{0x14, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//complete Mic1 path
+	{0x14, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//complete LO1 path
 /*
  * Port-C microphone 1 path
  * Path: 0x15->0x3A->0x0C->0x08

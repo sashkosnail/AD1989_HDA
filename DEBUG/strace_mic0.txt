@@ -1,10 +1,10 @@
 execve("/usr/bin/arecord", ["arecord", "-NDhw:0,0,0", "-fdat", "/home/user/alsa_mod/test/test0.w"...], [/* 28 vars */]) = 0
-brk(0)                                  = 0x9a15000
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7842000
+brk(0)                                  = 0x9dd7000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb78f8000
 access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
 open("/etc/ld.so.cache", O_RDONLY)      = 3
 fstat64(3, {st_mode=S_IFREG|0644, st_size=76629, ...}) = 0
-mmap2(NULL, 76629, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb782f000
+mmap2(NULL, 76629, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb78e5000
 close(3)                                = 0
 open("/lib/librt.so.1", O_RDONLY)       = 3
 read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\300h\207\0004\0\0\0"..., 512) = 512
@@ -33,7 +33,7 @@ close(3)                                = 0
 open("/lib/libpthread.so.0", O_RDONLY)  = 3
 read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0`\274\205\0004\0\0\0"..., 512) = 512
 fstat64(3, {st_mode=S_IFREG|0755, st_size=138056, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb782e000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb78e4000
 mmap2(0x857000, 111100, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x857000
 mmap2(0x86f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x17) = 0x86f000
 mmap2(0x871000, 4604, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x871000
@@ -52,90 +52,90 @@ fstat64(3, {st_mode=S_IFREG|0755, st_size=114320, ...}) = 0
 mmap2(0x8c4000, 115788, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x8c4000
 mmap2(0x8e0000, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1b) = 0x8e0000
 close(3)                                = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb782d000
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb782c000
-set_thread_area({entry_number:-1 -> 6, base_addr:0xb782c6c0, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb78e3000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb78e2000
+set_thread_area({entry_number:-1 -> 6, base_addr:0xb78e26c0, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
 mprotect(0x848000, 8192, PROT_READ)     = 0
 mprotect(0x86f000, 4096, PROT_READ)     = 0
 mprotect(0x853000, 4096, PROT_READ)     = 0
 mprotect(0x8a9000, 4096, PROT_READ)     = 0
 mprotect(0x87d000, 4096, PROT_READ)     = 0
 mprotect(0x6b6000, 4096, PROT_READ)     = 0
-munmap(0xb782f000, 76629)               = 0
-set_tid_address(0xb782c728)             = 15966
-set_robust_list(0xb782c730, 0xc)        = 0
+munmap(0xb78e5000, 76629)               = 0
+set_tid_address(0xb78e2728)             = 23365
+set_robust_list(0xb78e2730, 0xc)        = 0
 rt_sigaction(SIGRTMIN, {0x85b720, [], SA_SIGINFO}, NULL, 8) = 0
 rt_sigaction(SIGRT_1, {0x85b7a0, [], SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
 rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
 getrlimit(RLIMIT_STACK, {rlim_cur=8192*1024, rlim_max=RLIM_INFINITY}) = 0
 uname({sys="Linux", node="eurotech.nca.uwo.ca", ...}) = 0
-brk(0)                                  = 0x9a15000
-brk(0x9a36000)                          = 0x9a36000
-brk(0)                                  = 0x9a36000
+brk(0)                                  = 0x9dd7000
+brk(0x9df8000)                          = 0x9df8000
+brk(0)                                  = 0x9df8000
 open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE) = 3
 fstat64(3, {st_mode=S_IFREG|0644, st_size=99158720, ...}) = 0
-mmap2(NULL, 2097152, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb762c000
-mmap2(NULL, 1179648, PROT_READ, MAP_PRIVATE, 3, 0xe25) = 0xb750c000
+mmap2(NULL, 2097152, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb76e2000
+mmap2(NULL, 1179648, PROT_READ, MAP_PRIVATE, 3, 0xe25) = 0xb75c2000
 close(3)                                = 0
 stat64("/usr/share/alsa/alsa.conf", {st_mode=S_IFREG|0644, st_size=9030, ...}) = 0
 open("/usr/share/alsa/alsa.conf", O_RDONLY) = 3
 fstat64(3, {st_mode=S_IFREG|0644, st_size=9030, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb750b000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75c1000
 read(3, "#\n#  ALSA library configuration "..., 4096) = 4096
 read(3, "\t\t\t]\n\t\t\tdefault {\n\t\t\t\t@func refe"..., 4096) = 4096
 read(3, "\n\t}\n\tcard {\n\t\t@func refer\n\t\tname"..., 4096) = 838
 read(3, "", 4096)                       = 0
 read(3, "", 4096)                       = 0
 close(3)                                = 0
-munmap(0xb750b000, 4096)                = 0
+munmap(0xb75c1000, 4096)                = 0
 futex(0x854060, FUTEX_WAKE_PRIVATE, 2147483647) = 0
 access("/etc/asound.conf", R_OK)        = 0
 open("/etc/asound.conf", O_RDONLY)      = 3
 fstat64(3, {st_mode=S_IFREG|0644, st_size=159, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb750b000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75c1000
 read(3, "#\n# Place your global alsa-lib c"..., 4096) = 159
 read(3, "", 4096)                       = 0
 read(3, "", 4096)                       = 0
 close(3)                                = 0
-munmap(0xb750b000, 4096)                = 0
+munmap(0xb75c1000, 4096)                = 0
 access("/home/user/.asoundrc", R_OK)    = 0
 open("/home/user/.asoundrc", O_RDONLY)  = 3
 fstat64(3, {st_mode=S_IFREG|0664, st_size=381, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb750b000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75c1000
 read(3, "#defines the required PCM setup\n"..., 4096) = 381
 read(3, "", 4096)                       = 0
 read(3, "", 4096)                       = 0
 close(3)                                = 0
-munmap(0xb750b000, 4096)                = 0
+munmap(0xb75c1000, 4096)                = 0
 access("/home/user/alsa_mod/confs/asoundrc.conf", R_OK) = 0
 open("/home/user/alsa_mod/confs/asoundrc.conf", O_RDONLY) = 3
 fstat64(3, {st_mode=S_IFREG|0664, st_size=381, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb750b000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75c1000
 read(3, "#defines the required PCM setup\n"..., 4096) = 381
 read(3, "", 4096)                       = 0
 read(3, "", 4096)                       = 0
 close(3)                                = 0
-munmap(0xb750b000, 4096)                = 0
+munmap(0xb75c1000, 4096)                = 0
 open("/dev/snd/controlC0", O_RDONLY|O_CLOEXEC) = 3
 fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
-ioctl(3, UI_DEV_CREATE, 0xbfabc104)     = 0
+ioctl(3, UI_DEV_CREATE, 0xbfaa6e44)     = 0
 close(3)                                = 0
 open("/dev/snd/controlC0", O_RDWR|O_CLOEXEC) = 3
 fcntl64(3, F_SETFD, FD_CLOEXEC)         = 0
-ioctl(3, USBDEVFS_CONTROL or USBDEVFS_CONTROL32, 0xbfabc2d8) = 0
-ioctl(3, 0x40045532, 0xbfabc304)        = 0
+ioctl(3, USBDEVFS_CONTROL or USBDEVFS_CONTROL32, 0xbfaa7018) = 0
+ioctl(3, 0x40045532, 0xbfaa7044)        = 0
 open("/dev/snd/pcmC0D0c", O_RDWR|O_NONBLOCK|O_CLOEXEC) = 4
 fcntl64(4, F_SETFD, FD_CLOEXEC)         = 0
-ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfabc364) = 0
+ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfaa70a4) = 0
 close(3)                                = 0
-ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfabc158) = 0
+ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfaa6e98) = 0
 fcntl64(4, F_GETFL)                     = 0x80802 (flags O_RDWR|O_NONBLOCK|O_CLOEXEC)
-ioctl(4, AGPIOC_INFO, 0xbfabc154)       = 0
-clock_gettime(CLOCK_MONOTONIC, {2019, 67393390}) = 0
-ioctl(4, AGPIOC_SETUP, 0xbfabc14c)      = 0
-mmap2(NULL, 4096, PROT_READ, MAP_SHARED, 4, 0x80000) = 0xb750b000
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_SHARED, 4, 0x81000) = 0xb750a000
-ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfabc690) = 0
+ioctl(4, AGPIOC_INFO, 0xbfaa6e94)       = 0
+clock_gettime(CLOCK_MONOTONIC, {4021, 452112685}) = 0
+ioctl(4, AGPIOC_SETUP, 0xbfaa6e8c)      = 0
+mmap2(NULL, 4096, PROT_READ, MAP_SHARED, 4, 0x80000) = 0xb75c1000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_SHARED, 4, 0x81000) = 0xb75c0000
+ioctl(4, AGPIOC_ACQUIRE or APM_IOC_STANDBY, 0xbfaa73d0) = 0
 fcntl64(4, F_GETFL)                     = 0x80802 (flags O_RDWR|O_NONBLOCK|O_CLOEXEC)
 fcntl64(4, F_SETFL, O_RDWR|O_NONBLOCK|O_CLOEXEC) = 0
 rt_sigaction(SIGINT, {0x804dc40, [INT], SA_RESTART}, {SIG_IGN, [], 0}, 8) = 0
@@ -144,11 +144,11 @@ rt_sigaction(SIGABRT, {0x804dc40, [ABRT], SA_RESTART}, {SIG_DFL, [], 0}, 8) = 0
 rt_sigaction(SIGUSR1, {0x804a900, [USR1], SA_RESTART}, {SIG_DFL, [], 0}, 8) = 0
 open("/usr/share/locale/locale.alias", O_RDONLY) = 3
 fstat64(3, {st_mode=S_IFREG|0644, st_size=2512, ...}) = 0
-mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7509000
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75bf000
 read(3, "# Locale name alias data base.\n#"..., 4096) = 2512
 read(3, "", 4096)                       = 0
 close(3)                                = 0
-munmap(0xb7509000, 4096)                = 0
+munmap(0xb75bf000, 4096)                = 0
 open("/usr/share/locale/en_CA.utf8/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
 open("/usr/share/locale/en_CA/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
 open("/usr/share/locale/en.utf8/LC_MESSAGES/alsa-utils.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
@@ -158,22 +158,22 @@ write(2, "Signed 16 bit Little Endian, ", 29) = 29
 write(2, "Rate 48000 Hz, ", 15)         = 15
 write(2, "Stereo", 6)                   = 6
 write(2, "\n", 1)                       = 1
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4110, 0xbfab9d24)        = 0
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4110, 0xbfaba2d0)        = 0
-ioctl(4, 0xc25c4111, 0xbfaba2d0)        = 0
-ioctl(4, 0xc0684113, 0xbfaba184)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa4a64)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4110, 0xbfaa5010)        = 0
+ioctl(4, 0xc25c4111, 0xbfaa5010)        = 0
+ioctl(4, 0xc0684113, 0xbfaa4ec4)        = 0
 ioctl(4, 0x4140, 0x360d3ed)             = 0
-ioctl(0, SNDCTL_TMR_TIMEBASE or TCGETS, 0xbfaba538) = -1 ENOTTY (Inappropriate ioctl for device)
+ioctl(0, SNDCTL_TMR_TIMEBASE or TCGETS, 0xbfaa5278) = -1 ENOTTY (Inappropriate ioctl for device)
 fcntl64(0, F_GETFL)                     = 0x8000 (flags O_RDONLY|O_LARGEFILE)
 fcntl64(0, F_SETFL, O_RDONLY|O_NONBLOCK|O_LARGEFILE) = 0
 ioctl(0, SNDCTL_TMR_START or TCSETS, {B75 -opost isig -icanon -echo ...}) = -1 ENOTTY (Inappropriate ioctl for device)
@@ -184,742 +184,403 @@ write(3, "fmt \20\0\0\0", 8)            = 8
 write(3, "\1\0\2\0\200\273\0\0\0\356\2\0\4\0\20\0", 16) = 16
 write(3, "data\0\0\0\200", 8)           = 8
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = -1 EAGAIN (Resource temporarily unavailable)
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
-read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
-write(3, "\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0\1\0"..., 16384) = 16384
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
+poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = 0 (Timeout)
 read(0, "", 1)                          = 0
-ioctl(4, 0x800c4151, 0xbfaba574)        = 0
+ioctl(4, 0x800c4151, 0xbfaa52b4)        = -1 EAGAIN (Resource temporarily unavailable)
 poll([{fd=4, events=POLLIN|POLLERR|POLLNVAL}], 1, 100) = ? ERESTART_RESTARTBLOCK (To be restarted)
 --- SIGTERM (Terminated) @ 0 (0) ---
 futex(0x84b8e0, FUTEX_WAKE_PRIVATE, 2147483647) = 0
@@ -929,15 +590,15 @@ open("/usr/share/locale/en.utf8/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No 
 open("/usr/share/locale/en/LC_MESSAGES/libc.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
 write(2, "Aborted by signal Terminated...\n", 32) = 32
 _llseek(3, 4, [4], SEEK_SET)            = 0
-write(3, "$\200!\0", 4)                 = 4
+write(3, "$\0\0\0", 4)                  = 4
 _llseek(3, 36, [36], SEEK_SET)          = 0
-write(3, "data\0\200!\0", 8)            = 8
+write(3, "data\0\0\0\0", 8)             = 8
 close(3)                                = 0
-ioctl(4, 0x4143, 0xb7842828)            = 0
+ioctl(4, 0x4143, 0xb78f8828)            = 0
 ioctl(4, 0x4112, 0)                     = 0
 close(4)                                = 0
-munmap(0xb750b000, 4096)                = 0
-munmap(0xb750a000, 4096)                = 0
-ioctl(0, SNDCTL_TMR_TIMEBASE or TCGETS, 0xbfab9f18) = -1 ENOTTY (Inappropriate ioctl for device)
+munmap(0xb75c1000, 4096)                = 0
+munmap(0xb75c0000, 4096)                = 0
+ioctl(0, SNDCTL_TMR_TIMEBASE or TCGETS, 0xbfaa4c58) = -1 ENOTTY (Inappropriate ioctl for device)
 ioctl(0, SNDCTL_TMR_START or TCSETS, {B0 -opost isig -icanon -echo ...}) = -1 ENOTTY (Inappropriate ioctl for device)
 exit_group(1)                           = ?

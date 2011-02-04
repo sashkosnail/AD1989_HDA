@@ -268,8 +268,8 @@
 </g>
 <!-- nid&#45;03&#45;ampout&#45;&gt;nid&#45;30 -->
 <g id="edge347" class="edge"><title>nid&#45;03&#45;ampout&#45;&gt;nid&#45;30</title>
-<path fill="none" stroke="#333333" d="M1402.15,-1018C1467.15,-1018 1632.63,-1018 1717.72,-1018"/>
-<polygon fill="#333333" stroke="#333333" points="1717.94,-1021.5 1727.94,-1018 1717.94,-1014.5 1717.94,-1021.5"/>
+<path fill="none" stroke="gray" stroke-dasharray="5,2" d="M1402.15,-1018C1467.15,-1018 1632.63,-1018 1717.72,-1018"/>
+<polygon fill="gray" stroke="gray" points="1717.94,-1021.5 1727.94,-1018 1717.94,-1014.5 1717.94,-1021.5"/>
 </g>
 <!-- nid&#45;04 -->
 <g id="node8" class="node"><title>nid&#45;04</title>
@@ -319,8 +319,8 @@
 </g>
 <!-- nid&#45;04&#45;ampout&#45;&gt;nid&#45;30 -->
 <g id="edge349" class="edge"><title>nid&#45;04&#45;ampout&#45;&gt;nid&#45;30</title>
-<path fill="none" stroke="gray" stroke-dasharray="5,2" d="M1389.53,-870.627C1441.75,-890.856 1621.77,-960.586 1714.23,-996.398"/>
-<polygon fill="gray" stroke="gray" points="1713.12,-999.72 1723.71,-1000.07 1715.65,-993.193 1713.12,-999.72"/>
+<path fill="none" stroke="#333333" d="M1389.53,-870.627C1441.75,-890.856 1621.77,-960.586 1714.23,-996.398"/>
+<polygon fill="#333333" stroke="#333333" points="1713.12,-999.72 1723.71,-1000.07 1715.65,-993.193 1713.12,-999.72"/>
 </g>
 <!-- nid&#45;31 -->
 <g id="node297" class="node"><title>nid&#45;31</title>
@@ -430,7 +430,7 @@
 </g>
 <!-- nid&#45;0c&#45;ampout -->
 <g id="node25" class="node"><title>nid&#45;0c&#45;ampout</title>
-<polygon fill="none" stroke="#0000ff" points="2539,-2473 2498.5,-2491 2498.5,-2455 2539,-2473"/>
+<polygon fill="none" stroke="#c8c8c8" points="2539,-2473 2498.5,-2491 2498.5,-2455 2539,-2473"/>
 </g>
 <!-- nid&#45;0c&#45;ampout&#45;&gt;nid&#45;08 -->
 <g id="edge19" class="edge"><title>nid&#45;0c&#45;ampout&#45;&gt;nid&#45;08</title>
@@ -445,7 +445,7 @@
 </g>
 <!-- nid&#45;0d&#45;ampout -->
 <g id="node29" class="node"><title>nid&#45;0d&#45;ampout</title>
-<polygon fill="none" stroke="#0000ff" points="2539,-3508 2498.5,-3526 2498.5,-3490 2539,-3508"/>
+<polygon fill="none" stroke="#c8c8c8" points="2539,-3508 2498.5,-3526 2498.5,-3490 2539,-3508"/>
 </g>
 <!-- nid&#45;0d&#45;ampout&#45;&gt;nid&#45;09 -->
 <g id="edge22" class="edge"><title>nid&#45;0d&#45;ampout&#45;&gt;nid&#45;09</title>
@@ -509,8 +509,8 @@
 </g>
 <!-- nid&#45;0c&#45;&gt;nid&#45;0c&#45;ampout -->
 <g id="edge29" class="edge"><title>nid&#45;0c&#45;&gt;nid&#45;0c&#45;ampout</title>
-<path fill="none" stroke="#0000ff" d="M2207.2,-2473C2282.99,-2473 2439.26,-2473 2493.2,-2473"/>
-<polygon fill="#0000ff" stroke="#0000ff" points="2493.39,-2474.75 2498.39,-2473 2493.39,-2471.25 2493.39,-2474.75"/>
+<path fill="none" stroke="#c8c8c8" d="M2207.2,-2473C2282.99,-2473 2439.26,-2473 2493.2,-2473"/>
+<polygon fill="#c8c8c8" stroke="#c8c8c8" points="2493.39,-2474.75 2498.39,-2473 2493.39,-2471.25 2493.39,-2474.75"/>
 </g>
 <!-- nid&#45;38&#45;ampout -->
 <g id="node40" class="node"><title>nid&#45;38&#45;ampout</title>
@@ -518,8 +518,8 @@
 </g>
 <!-- nid&#45;38&#45;ampout&#45;&gt;nid&#45;0c -->
 <g id="edge31" class="edge"><title>nid&#45;38&#45;ampout&#45;&gt;nid&#45;0c</title>
-<path fill="none" stroke="gray" stroke-dasharray="5,2" d="M990.247,-3611.26C1101.72,-3621.29 1604.6,-3650.84 1868,-3400 1999.07,-3275.18 2118.73,-2710.25 2154.31,-2529.09"/>
-<polygon fill="gray" stroke="gray" points="2157.76,-2529.72 2156.24,-2519.23 2150.89,-2528.37 2157.76,-2529.72"/>
+<path fill="none" stroke="#333333" d="M990.247,-3611.26C1101.72,-3621.29 1604.6,-3650.84 1868,-3400 1999.07,-3275.18 2118.73,-2710.25 2154.31,-2529.09"/>
+<polygon fill="#333333" stroke="#333333" points="2157.76,-2529.72 2156.24,-2519.23 2150.89,-2528.37 2157.76,-2529.72"/>
 </g>
 <!-- nid&#45;0d -->
 <g id="node63" class="node"><title>nid&#45;0d</title>
@@ -529,8 +529,8 @@
 </g>
 <!-- nid&#45;38&#45;ampout&#45;&gt;nid&#45;0d -->
 <g id="edge56" class="edge"><title>nid&#45;38&#45;ampout&#45;&gt;nid&#45;0d</title>
-<path fill="none" stroke="gray" stroke-dasharray="5,2" d="M978.24,-3616.66C1015.73,-3644.16 1149.99,-3737.91 1278,-3769 1532.82,-3830.88 1622.63,-3861.49 1868,-3769 1979.18,-3727.09 2075.8,-3622.53 2126.71,-3559.2"/>
-<polygon fill="gray" stroke="gray" points="2129.5,-3561.31 2132.99,-3551.31 2124.03,-3556.96 2129.5,-3561.31"/>
+<path fill="none" stroke="#333333" d="M978.24,-3616.66C1015.73,-3644.16 1149.99,-3737.91 1278,-3769 1532.82,-3830.88 1622.63,-3861.49 1868,-3769 1979.18,-3727.09 2075.8,-3622.53 2126.71,-3559.2"/>
+<polygon fill="#333333" stroke="#333333" points="2129.5,-3561.31 2132.99,-3551.31 2124.03,-3556.96 2129.5,-3561.31"/>
 </g>
 <!-- nid&#45;0e -->
 <g id="node76" class="node"><title>nid&#45;0e</title>
@@ -540,8 +540,8 @@
 </g>
 <!-- nid&#45;38&#45;ampout&#45;&gt;nid&#45;0e -->
 <g id="edge79" class="edge"><title>nid&#45;38&#45;ampout&#45;&gt;nid&#45;0e</title>
-<path fill="none" stroke="gray" stroke-dasharray="5,2" d="M977.226,-3617.46C1012.71,-3649.37 1145.08,-3762.83 1278,-3805 1582.38,-3901.58 1974.8,-3871.34 2113.6,-3856.27"/>
-<polygon fill="gray" stroke="gray" points="2114.37,-3859.71 2123.92,-3855.13 2113.6,-3852.75 2114.37,-3859.71"/>
+<path fill="none" stroke="#333333" d="M977.226,-3617.46C1012.71,-3649.37 1145.08,-3762.83 1278,-3805 1582.38,-3901.58 1974.8,-3871.34 2113.6,-3856.27"/>
+<polygon fill="#333333" stroke="#333333" points="2114.37,-3859.71 2123.92,-3855.13 2113.6,-3852.75 2114.37,-3859.71"/>
 </g>
 <!-- nid&#45;20&#45;ampin&#45;56 -->
 <g id="node185" class="node"><title>nid&#45;20&#45;ampin&#45;56</title>
@@ -570,8 +570,8 @@
 </g>
 <!-- nid&#45;39&#45;ampout&#45;&gt;nid&#45;0c -->
 <g id="edge33" class="edge"><title>nid&#45;39&#45;ampout&#45;&gt;nid&#45;0c</title>
-<path fill="none" stroke="#333333" d="M986.976,-3470.68C1090.25,-3489.54 1590.13,-3565.84 1868,-3335 1997.52,-3227.4 2116.9,-2703.24 2153.53,-2529.26"/>
-<polygon fill="#333333" stroke="#333333" points="2156.99,-2529.79 2155.62,-2519.28 2150.14,-2528.35 2156.99,-2529.79"/>
+<path fill="none" stroke="gray" stroke-dasharray="5,2" d="M986.976,-3470.68C1090.25,-3489.54 1590.13,-3565.84 1868,-3335 1997.52,-3227.4 2116.9,-2703.24 2153.53,-2529.26"/>
+<polygon fill="gray" stroke="gray" points="2156.99,-2529.79 2155.62,-2519.28 2150.14,-2528.35 2156.99,-2529.79"/>
 </g>
 <!-- nid&#45;39&#45;ampout&#45;&gt;nid&#45;0d -->
 <g id="edge58" class="edge"><title>nid&#45;39&#45;ampout&#45;&gt;nid&#45;0d</title>
@@ -609,8 +609,8 @@
 </g>
 <!-- nid&#45;3a&#45;ampout&#45;&gt;nid&#45;0d -->
 <g id="edge60" class="edge"><title>nid&#45;3a&#45;ampout&#45;&gt;nid&#45;0d</title>
-<path fill="none" stroke="#333333" d="M976.625,-3307.48C1022.72,-3352.73 1239.33,-3564.12 1278,-3579 1579.02,-3694.82 1978.99,-3574.51 2116.31,-3526.18"/>
-<polygon fill="#333333" stroke="#333333" points="2117.87,-3529.34 2126.12,-3522.69 2115.53,-3522.74 2117.87,-3529.34"/>
+<path fill="none" stroke="gray" stroke-dasharray="5,2" d="M976.625,-3307.48C1022.72,-3352.73 1239.33,-3564.12 1278,-3579 1579.02,-3694.82 1978.99,-3574.51 2116.31,-3526.18"/>
+<polygon fill="gray" stroke="gray" points="2117.87,-3529.34 2126.12,-3522.69 2115.53,-3522.74 2117.87,-3529.34"/>
 </g>
 <!-- nid&#45;3a&#45;ampout&#45;&gt;nid&#45;0e -->
 <g id="edge83" class="edge"><title>nid&#45;3a&#45;ampout&#45;&gt;nid&#45;0e</title>
@@ -685,8 +685,8 @@
 </g>
 <!-- nid&#45;3c&#45;ampout&#45;&gt;nid&#45;0e -->
 <g id="edge87" class="edge"><title>nid&#45;3c&#45;ampout&#45;&gt;nid&#45;0e</title>
-<path fill="none" stroke="#333333" d="M973.885,-2259.81C992.391,-2291.12 1049.84,-2391.97 1078,-2483 1244,-3019.66 875.747,-3338.89 1278,-3731 1397.53,-3847.51 1941.24,-3852.27 2112.9,-3850.79"/>
-<polygon fill="#333333" stroke="#333333" points="2112.99,-3854.29 2122.95,-3850.7 2112.92,-3847.29 2112.99,-3854.29"/>
+<path fill="none" stroke="gray" stroke-dasharray="5,2" d="M973.885,-2259.81C992.391,-2291.12 1049.84,-2391.97 1078,-2483 1244,-3019.66 875.747,-3338.89 1278,-3731 1397.53,-3847.51 1941.24,-3852.27 2112.9,-3850.79"/>
+<polygon fill="gray" stroke="gray" points="2112.99,-3854.29 2122.95,-3850.7 2112.92,-3847.29 2112.99,-3854.29"/>
 </g>
 <!-- nid&#45;34 -->
 <g id="node202" class="node"><title>nid&#45;34</title>
@@ -913,17 +913,17 @@
 </g>
 <!-- nid&#45;0d&#45;&gt;nid&#45;0d&#45;ampout -->
 <g id="edge54" class="edge"><title>nid&#45;0d&#45;&gt;nid&#45;0d&#45;ampout</title>
-<path fill="none" stroke="#0000ff" d="M2207.2,-3508C2282.99,-3508 2439.26,-3508 2493.2,-3508"/>
-<polygon fill="#0000ff" stroke="#0000ff" points="2493.39,-3509.75 2498.39,-3508 2493.39,-3506.25 2493.39,-3509.75"/>
+<path fill="none" stroke="#c8c8c8" d="M2207.2,-3508C2282.99,-3508 2439.26,-3508 2493.2,-3508"/>
+<polygon fill="#c8c8c8" stroke="#c8c8c8" points="2493.39,-3509.75 2498.39,-3508 2493.39,-3506.25 2493.39,-3509.75"/>
 </g>
 <!-- nid&#45;0e&#45;ampout -->
 <g id="node77" class="node"><title>nid&#45;0e&#45;ampout</title>
-<polygon fill="none" stroke="#0000ff" points="2539,-3850 2498.5,-3868 2498.5,-3832 2539,-3850"/>
+<polygon fill="none" stroke="#c8c8c8" points="2539,-3850 2498.5,-3868 2498.5,-3832 2539,-3850"/>
 </g>
 <!-- nid&#45;0e&#45;&gt;nid&#45;0e&#45;ampout -->
 <g id="edge77" class="edge"><title>nid&#45;0e&#45;&gt;nid&#45;0e&#45;ampout</title>
-<path fill="none" stroke="#0000ff" d="M2207.2,-3850C2282.99,-3850 2439.26,-3850 2493.2,-3850"/>
-<polygon fill="#0000ff" stroke="#0000ff" points="2493.39,-3851.75 2498.39,-3850 2493.39,-3848.25 2493.39,-3851.75"/>
+<path fill="none" stroke="#c8c8c8" d="M2207.2,-3850C2282.99,-3850 2439.26,-3850 2493.2,-3850"/>
+<polygon fill="#c8c8c8" stroke="#c8c8c8" points="2493.39,-3851.75 2498.39,-3850 2493.39,-3848.25 2493.39,-3851.75"/>
 </g>
 <!-- nid&#45;0f -->
 <g id="node90" class="node"><title>nid&#45;0f</title>
@@ -946,12 +946,12 @@
 </g>
 <!-- nid&#45;11&#45;ampout -->
 <g id="node95" class="node"><title>nid&#45;11&#45;ampout</title>
-<polygon fill="none" stroke="#0000ff" points="3327,-1459 3286.5,-1477 3286.5,-1441 3327,-1459"/>
+<polygon fill="none" stroke="#c8c8c8" points="3327,-1459 3286.5,-1477 3286.5,-1441 3327,-1459"/>
 </g>
 <!-- nid&#45;11&#45;in&#45;&gt;nid&#45;11&#45;ampout -->
 <g id="edge104" class="edge"><title>nid&#45;11&#45;in&#45;&gt;nid&#45;11&#45;ampout</title>
-<path fill="none" stroke="#0000ff" d="M2994.02,-1459C3093.88,-1459 3231.7,-1459 3281.29,-1459"/>
-<polygon fill="#0000ff" stroke="#0000ff" points="3281.35,-1460.75 3286.35,-1459 3281.35,-1457.25 3281.35,-1460.75"/>
+<path fill="none" stroke="#c8c8c8" d="M2994.02,-1459C3093.88,-1459 3231.7,-1459 3281.29,-1459"/>
+<polygon fill="#c8c8c8" stroke="#c8c8c8" points="3281.35,-1460.75 3286.35,-1459 3281.35,-1457.25 3281.35,-1460.75"/>
 </g>
 <!-- nid&#45;11&#45;out -->
 <g id="node98" class="node"><title>nid&#45;11&#45;out</title>
@@ -1101,24 +1101,24 @@
 <g id="node118" class="node"><title>nid&#45;14&#45;in</title>
 <polygon fill="none" stroke="green" points="2994,-1307 2770,-1307 2770,-1223 2994,-1223 2994,-1307"/>
 <text text-anchor="middle" x="2882" y="-1290.4" font-family="Times Roman,serif" font-size="14.00">0x14</text>
-<text text-anchor="middle" x="2882" y="-1271.4" font-family="Times Roman,serif" font-size="14.00">[Jack] Mic at Ext Front</text>
+<text text-anchor="middle" x="2882" y="-1271.4" font-family="Times Roman,serif" font-size="14.00">[Jack] Line Out at Ext Front</text>
 <text text-anchor="middle" x="2882" y="-1252.4" font-family="Times Roman,serif" font-size="14.00">Stereo</text>
 <text text-anchor="middle" x="2882" y="-1233.4" font-family="Times Roman,serif" font-size="14.00">IN OUT HP Detect Trigger ImpSense</text>
 </g>
 <!-- nid&#45;14&#45;ampout -->
 <g id="node119" class="node"><title>nid&#45;14&#45;ampout</title>
-<polygon fill="none" stroke="#0000ff" points="3327,-1265 3286.5,-1283 3286.5,-1247 3327,-1265"/>
+<polygon fill="none" stroke="#c8c8c8" points="3327,-1265 3286.5,-1283 3286.5,-1247 3327,-1265"/>
 </g>
 <!-- nid&#45;14&#45;in&#45;&gt;nid&#45;14&#45;ampout -->
 <g id="edge122" class="edge"><title>nid&#45;14&#45;in&#45;&gt;nid&#45;14&#45;ampout</title>
-<path fill="none" stroke="#0000ff" d="M2994.02,-1265C3093.88,-1265 3231.7,-1265 3281.29,-1265"/>
-<polygon fill="#0000ff" stroke="#0000ff" points="3281.35,-1266.75 3286.35,-1265 3281.35,-1263.25 3281.35,-1266.75"/>
+<path fill="none" stroke="#c8c8c8" d="M2994.02,-1265C3093.88,-1265 3231.7,-1265 3281.29,-1265"/>
+<polygon fill="#c8c8c8" stroke="#c8c8c8" points="3281.35,-1266.75 3286.35,-1265 3281.35,-1263.25 3281.35,-1266.75"/>
 </g>
 <!-- nid&#45;14&#45;out -->
 <g id="node122" class="node"><title>nid&#45;14&#45;out</title>
 <polygon fill="none" stroke="green" points="240,-1866 16,-1866 16,-1782 240,-1782 240,-1866"/>
 <text text-anchor="middle" x="128" y="-1849.4" font-family="Times Roman,serif" font-size="14.00">0x14</text>
-<text text-anchor="middle" x="128" y="-1830.4" font-family="Times Roman,serif" font-size="14.00">[Jack] Mic at Ext Front</text>
+<text text-anchor="middle" x="128" y="-1830.4" font-family="Times Roman,serif" font-size="14.00">[Jack] Line Out at Ext Front</text>
 <text text-anchor="middle" x="128" y="-1811.4" font-family="Times Roman,serif" font-size="14.00">Stereo</text>
 <text text-anchor="middle" x="128" y="-1792.4" font-family="Times Roman,serif" font-size="14.00">IN OUT HP Detect Trigger ImpSense</text>
 </g>
@@ -1164,12 +1164,12 @@
 </g>
 <!-- nid&#45;15&#45;ampout -->
 <g id="node127" class="node"><title>nid&#45;15&#45;ampout</title>
-<polygon fill="none" stroke="#0000ff" points="3327,-510 3286.5,-528 3286.5,-492 3327,-510"/>
+<polygon fill="none" stroke="#c8c8c8" points="3327,-510 3286.5,-528 3286.5,-492 3327,-510"/>
 </g>
 <!-- nid&#45;15&#45;in&#45;&gt;nid&#45;15&#45;ampout -->
 <g id="edge128" class="edge"><title>nid&#45;15&#45;in&#45;&gt;nid&#45;15&#45;ampout</title>
-<path fill="none" stroke="#0000ff" d="M2983.72,-510C3083.98,-510 3229.43,-510 3281,-510"/>
-<polygon fill="#0000ff" stroke="#0000ff" points="3281.26,-511.75 3286.26,-510 3281.26,-508.25 3281.26,-511.75"/>
+<path fill="none" stroke="#c8c8c8" d="M2983.72,-510C3083.98,-510 3229.43,-510 3281,-510"/>
+<polygon fill="#c8c8c8" stroke="#c8c8c8" points="3281.26,-511.75 3286.26,-510 3281.26,-508.25 3281.26,-511.75"/>
 </g>
 <!-- nid&#45;15&#45;out -->
 <g id="node130" class="node"><title>nid&#45;15&#45;out</title>
@@ -1267,12 +1267,12 @@
 </g>
 <!-- nid&#45;17&#45;ampout -->
 <g id="node143" class="node"><title>nid&#45;17&#45;ampout</title>
-<polygon fill="none" stroke="#0000ff" points="3327,-661 3286.5,-679 3286.5,-643 3327,-661"/>
+<polygon fill="none" stroke="#c8c8c8" points="3327,-661 3286.5,-679 3286.5,-643 3327,-661"/>
 </g>
 <!-- nid&#45;17&#45;in&#45;&gt;nid&#45;17&#45;ampout -->
 <g id="edge140" class="edge"><title>nid&#45;17&#45;in&#45;&gt;nid&#45;17&#45;ampout</title>
-<path fill="none" stroke="#0000ff" d="M2983.72,-661C3083.98,-661 3229.43,-661 3281,-661"/>
-<polygon fill="#0000ff" stroke="#0000ff" points="3281.26,-662.75 3286.26,-661 3281.26,-659.25 3281.26,-662.75"/>
+<path fill="none" stroke="#c8c8c8" d="M2983.72,-661C3083.98,-661 3229.43,-661 3281,-661"/>
+<polygon fill="#c8c8c8" stroke="#c8c8c8" points="3281.26,-662.75 3286.26,-661 3281.26,-659.25 3281.26,-662.75"/>
 </g>
 <!-- nid&#45;17&#45;out -->
 <g id="node146" class="node"><title>nid&#45;17&#45;out</title>
@@ -1534,13 +1534,13 @@
 </g>
 <!-- nid&#45;22&#45;ampin&#45;55 -->
 <g id="node212" class="node"><title>nid&#45;22&#45;ampin&#45;55</title>
-<polygon fill="none" stroke="#0000ff" points="2254.1,-1412 2120.45,-1450.18 2120.45,-1373.82 2254.1,-1412"/>
+<polygon fill="none" stroke="#c8c8c8" points="2254.1,-1412 2120.45,-1450.18 2120.45,-1373.82 2254.1,-1412"/>
 <text text-anchor="middle" x="2165" y="-1408.9" font-family="Times Roman,serif" font-size="14.00">0 (0x37)</text>
 </g>
 <!-- nid&#45;22&#45;ampin&#45;55&#45;&gt;nid&#45;22 -->
 <g id="edge214" class="edge"><title>nid&#45;22&#45;ampin&#45;55&#45;&gt;nid&#45;22</title>
-<path fill="none" stroke="#0000ff" d="M2225.44,-1420.19C2294.76,-1429.58 2406.71,-1444.74 2468.15,-1453.06"/>
-<polygon fill="#0000ff" stroke="#0000ff" points="2468.03,-1454.81 2473.22,-1453.75 2468.5,-1451.34 2468.03,-1454.81"/>
+<path fill="none" stroke="#c8c8c8" d="M2225.44,-1420.19C2294.76,-1429.58 2406.71,-1444.74 2468.15,-1453.06"/>
+<polygon fill="#c8c8c8" stroke="#c8c8c8" points="2468.03,-1454.81 2473.22,-1453.75 2468.5,-1451.34 2468.03,-1454.81"/>
 </g>
 <!-- nid&#45;22&#45;ampin&#45;33&#45;&gt;nid&#45;22 -->
 <g id="edge216" class="edge"><title>nid&#45;22&#45;ampin&#45;33&#45;&gt;nid&#45;22</title>
