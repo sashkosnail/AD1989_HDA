@@ -3,7 +3,7 @@ work_dir="/home/user/alsa_mod/"
 amix_run=`ps -e|grep alsamixer|cut -d" " -f1`
 echo $amix
 if [ ! -z $amix_run ]; then
-	kill -s 3 $amix_run
+	kill -s SIGQUIT $amix_run
 fi
 $work_dir/sh/clean.sh
 make HLC=yes

@@ -1216,6 +1216,7 @@ void snd_hda_codec_setup_stream(struct hda_codec *codec, hda_nid_t nid,
 	struct hda_codec *c;
 	struct hda_cvt_setup *p;
 	unsigned int oldval, newval;
+	int type;
 	int i;
 
 	if (!nid)
@@ -1254,10 +1255,12 @@ void snd_hda_codec_setup_stream(struct hda_codec *codec, hda_nid_t nid,
 	p->dirty = 0;
 
 	/* make other inactive cvts with the same stream-tag dirty */
+	type = get_wcaps_type(get_wcaps(codec, nid));
 	list_for_each_entry(c, &codec->bus->codec_list, list) {
 		for (i = 0; i < c->cvt_setups.used; i++) {
 			p = snd_array_elem(&c->cvt_setups, i);
-			if (!p->active && p->stream_tag == stream_tag)
+			if (!p->active && p->stream_tag == stream_tag &&
+			    get_wcaps_type(get_wcaps(codec, p->nid)) == type)
 				p->dirty = 1;
 		}
 	}
@@ -1280,6 +1283,9 @@ void __snd_hda_codec_cleanup_stream(struct hda_codec *codec, hda_nid_t nid,
 
 	if (!nid)
 		return;
+
+	if (codec->no_sticky_stream)
+		do_now = 1;
 
 	snd_printdd("hda_codec_cleanup_stream: NID=0x%x\n", nid);
 	p = get_hda_cvt_setup(codec, nid);
@@ -1831,6 +1837,7 @@ int snd_hda_mixer_amp_tlv(struct snd_kcontrol *kcontrol, int op_flag,
 	hda_nid_t nid = get_amp_nid(kcontrol);
 	int dir = get_amp_direction(kcontrol);
 	unsigned int ofs = get_amp_offset(kcontrol);
+	bool min_mute = get_amp_min_mute(kcontrol);
 	u32 caps, val1, val2;
 
 	if (size < 4 * sizeof(unsigned int))
@@ -1841,6 +1848,8 @@ int snd_hda_mixer_amp_tlv(struct snd_kcontrol *kcontrol, int op_flag,
 	val1 = -((caps & AC_AMPCAP_OFFSET) >> AC_AMPCAP_OFFSET_SHIFT);
 	val1 += ofs;
 	val1 = ((int)val1) * ((int)val2);
+	if (min_mute)
+		val2 |= TLV_DB_SCALE_MUTE;
 	if (put_user(SNDRV_CTL_TLVT_DB_SCALE, _tlv))
 		return -EFAULT;
 	if (put_user(2 * sizeof(unsigned int), _tlv + 1))
@@ -1909,6 +1918,16 @@ struct snd_kcontrol *snd_hda_find_mixer_ctl(struct hda_codec *codec,
 	return _snd_hda_find_mixer_ctl(codec, name, 0);
 }
 EXPORT_SYMBOL_HDA(snd_hda_find_mixer_ctl);
+
+static int find_empty_mixer_ctl_idx(struct hda_codec *codec, const char *name)
+{
+	int idx;
+	for (idx = 0; idx < 16; idx++) { /* 16 ctlrs should be large enough */
+		if (!_snd_hda_find_mixer_ctl(codec, name, idx))
+			return idx;
+	}
+	return -EBUSY;
+}
 
 /**
  * snd_hda_ctl_add - Add a control element and assign to the codec
@@ -2115,10 +2134,10 @@ int snd_hda_codec_reset(struct hda_codec *codec)
  * This function returns zero if successful or a negative error code.
  */
 int snd_hda_add_vmaster(struct hda_codec *codec, char *name,
-			unsigned int *tlv, const char **slaves)
+			unsigned int *tlv, const char * const *slaves)
 {
 	struct snd_kcontrol *kctl;
-	const char **s;
+	const char * const *s;
 	int err;
 
 	for (s = slaves; *s && !snd_hda_find_mixer_ctl(codec, *s); s++)
@@ -2645,8 +2664,6 @@ static struct snd_kcontrol_new dig_mixes[] = {
 	{ } /* end */
 };
 
-#define SPDIF_MAX_IDX	4	/* 4 instances should be enough to probe */
-
 /**
  * snd_hda_create_spdif_out_ctls - create Output SPDIF-related controls
  * @codec: the HDA codec
@@ -2664,12 +2681,8 @@ int snd_hda_create_spdif_out_ctls(struct hda_codec *codec, hda_nid_t nid)
 	struct snd_kcontrol_new *dig_mix;
 	int idx;
 
-	for (idx = 0; idx < SPDIF_MAX_IDX; idx++) {
-		if (!_snd_hda_find_mixer_ctl(codec, "IEC958 Playback Switch",
-					     idx))
-			break;
-	}
-	if (idx >= SPDIF_MAX_IDX) {
+	idx = find_empty_mixer_ctl_idx(codec, "IEC958 Playback Switch");
+	if (idx < 0) {
 		printk(KERN_ERR "hda_codec: too many IEC958 outputs\n");
 		return -EBUSY;
 	}
@@ -2820,12 +2833,8 @@ int snd_hda_create_spdif_in_ctls(struct hda_codec *codec, hda_nid_t nid)
 	struct snd_kcontrol_new *dig_mix;
 	int idx;
 
-	for (idx = 0; idx < SPDIF_MAX_IDX; idx++) {
-		if (!_snd_hda_find_mixer_ctl(codec, "IEC958 Capture Switch",
-					     idx))
-			break;
-	}
-	if (idx >= SPDIF_MAX_IDX) {
+	idx = find_empty_mixer_ctl_idx(codec, "IEC958 Capture Switch");
+	if (idx < 0) {
 		printk(KERN_ERR "hda_codec: too many IEC958 inputs\n");
 		return -EBUSY;
 	}
@@ -3680,7 +3689,7 @@ EXPORT_SYMBOL_HDA(snd_hda_build_pcms);
  * If no entries are matching, the function returns a negative value.
  */
 int snd_hda_check_board_config(struct hda_codec *codec,
-			       int num_configs, const char **models,
+			       int num_configs, const char * const *models,
 			       const struct snd_pci_quirk *tbl)
 {
 	if (codec->modelname && models) {
@@ -3744,7 +3753,7 @@ EXPORT_SYMBOL_HDA(snd_hda_check_board_config);
  * If no entries are matching, the function returns a negative value.
  */
 int snd_hda_check_board_codec_sid_config(struct hda_codec *codec,
-			       int num_configs, const char **models,
+			       int num_configs, const char * const *models,
 			       const struct snd_pci_quirk *tbl)
 {
 	const struct snd_pci_quirk *q;
@@ -3799,21 +3808,32 @@ int snd_hda_add_new_ctls(struct hda_codec *codec, struct snd_kcontrol_new *knew)
 
 	for (; knew->name; knew++) {
 		struct snd_kcontrol *kctl;
+		int addr = 0, idx = 0;
 		if (knew->iface == -1)	/* skip this codec private value */
 			continue;
-		kctl = snd_ctl_new1(knew, codec);
-		if (!kctl)
-			return -ENOMEM;
-		err = snd_hda_ctl_add(codec, 0, kctl);
-		if (err < 0) {
-			if (!codec->addr)
-				return err;
+		for (;;) {
 			kctl = snd_ctl_new1(knew, codec);
 			if (!kctl)
 				return -ENOMEM;
-			kctl->id.device = codec->addr;
+			if (addr > 0)
+				kctl->id.device = addr;
+			if (idx > 0)
+				kctl->id.index = idx;
 			err = snd_hda_ctl_add(codec, 0, kctl);
-			if (err < 0)
+			if (!err)
+				break;
+			/* try first with another device index corresponding to
+			 * the codec addr; if it still fails (or it's the
+			 * primary codec), then try another control index
+			 */
+			if (!addr && codec->addr)
+				addr = codec->addr;
+			else if (!idx && !knew->index) {
+				idx = find_empty_mixer_ctl_idx(codec,
+							       knew->name);
+				if (idx <= 0)
+					return err;
+			} else
 				return err;
 		}
 	}
@@ -4551,6 +4571,9 @@ int snd_hda_parse_pin_def_config(struct hda_codec *codec,
 		}
 		memset(cfg->hp_pins + cfg->hp_outs, 0,
 		       sizeof(hda_nid_t) * (AUTO_CFG_MAX_OUTS - cfg->hp_outs));
+		if (!cfg->hp_outs)
+			cfg->line_out_type = AUTO_PIN_HP_OUT;
+
 	}
 
 	/* sort by sequence */
@@ -4667,7 +4690,7 @@ const char *hda_get_input_pin_label(struct hda_codec *codec, hda_nid_t pin,
 					int check_location)
 {
 	unsigned int def_conf;
-	static const char *mic_names[] = {
+	static const char * const mic_names[] = {
 		"Internal Mic", "Dock Mic", "Mic", "Front Mic", "Rear Mic",
 	};
 	int attr;

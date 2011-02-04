@@ -1,0 +1,1046 @@
+upload=true&script=true&cardinfo=
+!!################################
+!!ALSA Information Script v 0.4.59
+!!################################
+
+!!Script ran on: Fri Feb  4 16:27:52 UTC 2011
+
+
+!!Linux Distribution
+!!------------------
+
+Fedora release 14 (Laughlin) Fedora release 14 (Laughlin) Fedora release 14 (Laughlin) Fedora release 14 (Laughlin)
+
+
+!!DMI Information
+!!---------------
+
+Manufacturer:      Eurotech, Inc.
+Product Name:      Catalyst
+
+
+!!Kernel Information
+!!------------------
+
+Kernel release:    2.6.37.hda1
+Operating System:  GNU/Linux
+Architecture:      i686
+Processor:         i686
+SMP Enabled:       Yes
+
+
+!!ALSA Version
+!!------------
+
+Driver version:     1.0.24
+Library version:    1.0.24.1
+Utilities version:  1.0.24.2
+
+
+!!Loaded ALSA modules
+!!-------------------
+
+snd_hda_intel
+
+
+!!Sound Servers on this system
+!!----------------------------
+
+Pulseaudio:
+      Installed - Yes (/usr/bin/pulseaudio)
+      Running - No
+
+Jack:
+      Installed - Yes (/usr/bin/jackd)
+      Running - No
+
+
+!!Soundcards recognised by ALSA
+!!-----------------------------
+
+ 0 [MID            ]: HDA-Intel - HDA Intel MID
+                      HDA Intel MID at 0x942c0000 irq 16
+
+
+!!PCI Soundcards installed in the system
+!!--------------------------------------
+
+00:1b.0 Audio device: Intel Corporation System Controller Hub (SCH Poulsbo) HD Audio Controller (rev 07)
+
+
+!!Advanced information - PCI Vendor/Device/Susbsystem ID's
+!!--------------------------------------------------------
+
+00:1b.0 0403: 8086:811b (rev 07)
+	Subsystem: 8086:8119
+
+
+!!Loaded sound module options
+!!--------------------------
+
+!!Module: snd_hda_intel
+	bdl_pos_adj : 32,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+	beep_mode : 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+	enable : Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y,Y
+	enable_msi : -1
+	id : (null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
+	index : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+	model : (null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
+	patch : (null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null),(null)
+	position_fix : 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	power_save : 0
+	power_save_controller : Y
+	probe_mask : -1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1
+	probe_only : 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+	single_cmd : N
+
+
+!!HDA-Intel Codec information
+!!---------------------------
+--startcollapse--
+
+Codec: Analog Devices AD1989A
+Address: 1
+AFG Function Id: 0x1 (unsol 0)
+Vendor Id: 0x11d4989a
+Subsystem Id: 0xbfd80000
+Revision Id: 0x100300
+No Modem Function Group found
+Default PCM:
+    rates [0x7ff]: 8000 11025 16000 22050 32000 44100 48000 88200 96000 176400 192000
+    bits [0xe]: 16 20 24
+    formats [0x1]: PCM
+Default Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+Default Amp-Out caps: ofs=0x27, nsteps=0x27, stepsize=0x05, mute=0
+GPIO: io=3, o=0, i=0, unsolicited=1, wake=0
+  IO[0]: enable=0, dir=0, wake=0, sticky=0, data=0, unsol=0
+  IO[1]: enable=0, dir=0, wake=0, sticky=0, data=1, unsol=0
+  IO[2]: enable=0, dir=0, wake=0, sticky=0, data=0, unsol=0
+Node 0x02 [Audio Output] wcaps 0x30211: Stereo Digital
+  Converter: stream=0, channel=0
+  Digital:
+  Digital category: 0x0
+  PCM:
+    rates [0x7e0]: 44100 48000 88200 96000 176400 192000
+    bits [0xe]: 16 20 24
+    formats [0x5]: PCM AC3
+  Delay: 3 samples
+Node 0x03 [Audio Output] wcaps 0x405: Stereo Amp-Out
+  Control: name="Headphone Playback Volume", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Device: name="AD1989 EuroPCM", type="Audio", device=0
+  Amp-Out caps: ofs=0x27, nsteps=0x27, stepsize=0x05, mute=0
+  Amp-Out vals:  [0x19 0x19]
+  Converter: stream=3, channel=0
+  Power states:  D0 D3
+  Power: setting=D0, actual=D0
+Node 0x04 [Audio Output] wcaps 0x405: Stereo Amp-Out
+  Amp-Out caps: ofs=0x27, nsteps=0x27, stepsize=0x05, mute=0
+  Amp-Out vals:  [0x27 0x27]
+  Converter: stream=0, channel=0
+  Power states:  D0 D3
+  Power: setting=D3, actual=D3
+Node 0x05 [Audio Output] wcaps 0x405: Stereo Amp-Out
+  Amp-Out caps: ofs=0x27, nsteps=0x27, stepsize=0x05, mute=0
+  Amp-Out vals:  [0x27 0x27]
+  Converter: stream=0, channel=0
+  Power states:  D0 D3
+  Power: setting=D3, actual=D3
+Node 0x06 [Audio Output] wcaps 0x405: Stereo Amp-Out
+  Amp-Out caps: ofs=0x27, nsteps=0x27, stepsize=0x05, mute=0
+  Amp-Out vals:  [0x27 0x27]
+  Converter: stream=0, channel=0
+  Power states:  D0 D3
+  Power: setting=D3, actual=D3
+Node 0x07 [Audio Input] wcaps 0x130391: Stereo Digital
+  Converter: stream=0, channel=0
+  SDI-Select: 0
+  Digital:
+  Digital category: 0x0
+  PCM:
+    rates [0x7e0]: 44100 48000 88200 96000 176400 192000
+    bits [0xe]: 16 20 24
+    formats [0x5]: PCM AC3
+  Unsolicited: tag=00, enabled=0
+  Delay: 3 samples
+  Connection: 1
+     0x1c
+Node 0x08 [Audio Input] wcaps 0x100501: Stereo
+  Converter: stream=0, channel=0
+  SDI-Select: 0
+  Power states:  D0 D3
+  Power: setting=D0, actual=D0
+  Connection: 1
+     0x0c
+Node 0x09 [Audio Input] wcaps 0x100501: Stereo
+  Device: name="AD1989 EuroPCM", type="Audio", device=0
+  Converter: stream=0, channel=0
+  SDI-Select: 0
+  Power states:  D0 D3
+  Power: setting=D0, actual=D0
+  Connection: 1
+     0x0d
+Node 0x0a [Audio Output] wcaps 0x405: Stereo Amp-Out
+  Amp-Out caps: ofs=0x27, nsteps=0x27, stepsize=0x05, mute=0
+  Amp-Out vals:  [0x27 0x27]
+  Converter: stream=0, channel=0
+  Power states:  D0 D3
+  Power: setting=D3, actual=D3
+Node 0x0b [Audio Output] wcaps 0x30211: Stereo Digital
+  Converter: stream=0, channel=0
+  Digital:
+  Digital category: 0x0
+  PCM:
+    rates [0x7e0]: 44100 48000 88200 96000 176400 192000
+    bits [0xe]: 16 20 24
+    formats [0x5]: PCM AC3
+  Delay: 3 samples
+Node 0x0c [Audio Selector] wcaps 0x30010d: Stereo Amp-Out
+  Control: name="Microphone 1 Capture Volume", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x27, nsteps=0x36, stepsize=0x05, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Connection: 11
+     0x38 0x39* 0x3a 0x3b 0x3c 0x18 0x24 0x25 0x3d 0x20 0x1f
+Node 0x0d [Audio Selector] wcaps 0x30010d: Stereo Amp-Out
+  Control: name="Microphone 2 Capture Volume", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x27, nsteps=0x36, stepsize=0x05, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Connection: 10
+     0x38 0x39 0x3a* 0x3b 0x3c 0x18 0x24 0x25 0x3d 0x20
+Node 0x0e [Audio Selector] wcaps 0x30010d: Stereo Amp-Out
+  Control: name="Microphone 3 Capture Volume", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x27, nsteps=0x36, stepsize=0x05, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Connection: 10
+     0x38 0x39 0x3a 0x3b 0x3c* 0x18 0x24 0x25 0x3d 0x20
+Node 0x0f [Audio Input] wcaps 0x100501: Stereo
+  Converter: stream=0, channel=0
+  SDI-Select: 0
+  Power states:  D0 D3
+  Power: setting=D0, actual=D0
+  Connection: 1
+     0x0e
+Node 0x10 [Beep Generator Widget] wcaps 0x70000c: Mono Amp-Out
+  Amp-Out caps: ofs=0x0f, nsteps=0x0f, stepsize=0x0b, mute=1
+  Amp-Out vals:  [0x00]
+Node 0x11 [Pin Complex] wcaps 0x40018d: Stereo Amp-Out
+  Control: name="Headphone Playback Switch", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0000373f: IN OUT HP Detect Trigger ImpSense
+    Vref caps: HIZ 50 GRD 80 100
+  Pin Default 0x02214110: [Jack] HP Out at Ext Front
+    Conn = 1/8, Color = Green
+    DefAssociation = 0x1, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0xc0: OUT HP VREF_HIZ
+  Unsolicited: tag=00, enabled=0
+  Connection: 1
+     0x22
+Node 0x12 [Pin Complex] wcaps 0x40018d: Stereo Amp-Out
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x80 0x80]
+  Pincap 0x0000373f: IN OUT HP Detect Trigger ImpSense
+    Vref caps: HIZ 50 GRD 80 100
+  Pin Default 0x01014010: [Jack] Line Out at Ext Rear
+    Conn = 1/8, Color = Green
+    DefAssociation = 0x1, Sequence = 0x0
+  Pin-ctls: 0x00: VREF_HIZ
+  Unsolicited: tag=00, enabled=0
+  Connection: 1
+     0x29
+Node 0x13 [Pin Complex] wcaps 0x40010c: Mono Amp-Out
+  Amp-Out caps: ofs=0x1f, nsteps=0x1f, stepsize=0x05, mute=1
+  Amp-Out vals:  [0x00]
+  Pincap 0x00000010: OUT
+  Pin Default 0x991301f0: [Fixed] Speaker at Int ATAPI
+    Conn = ATAPI, Color = Unknown
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x00:
+  Connection: 1
+     0x2d
+Node 0x14 [Pin Complex] wcaps 0x40018d: Stereo Amp-Out
+  Control: name="Microphone 1 Capture Switch", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x0000373f: IN OUT HP Detect Trigger ImpSense
+    Vref caps: HIZ 50 GRD 80 100
+  Pin Default 0x02a19120: [Jack] Mic at Ext Front
+    Conn = 1/8, Color = Pink
+    DefAssociation = 0x2, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x24: IN VREF_80
+  Unsolicited: tag=00, enabled=0
+  Connection: 1
+     0x2b
+Node 0x15 [Pin Complex] wcaps 0x40018d: Stereo Amp-Out
+  Control: name="Microphone 2 Capture Switch", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x00003737: IN OUT Detect Trigger ImpSense
+    Vref caps: HIZ 50 GRD 80 100
+  Pin Default 0x02a19121: [Jack] Mic at Ext Front
+    Conn = 1/8, Color = Pink
+    DefAssociation = 0x2, Sequence = 0x1
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x24: IN VREF_80
+  Unsolicited: tag=00, enabled=0
+  Connection: 1
+     0x2c
+Node 0x16 [Pin Complex] wcaps 0x40018d: Stereo Amp-Out
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x80 0x80]
+  Pincap 0x00000037: IN OUT Detect Trigger ImpSense
+  Pin Default 0x01011012: [Jack] Line Out at Ext Rear
+    Conn = 1/8, Color = Black
+    DefAssociation = 0x1, Sequence = 0x2
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+  Connection: 1
+     0x2a
+Node 0x17 [Pin Complex] wcaps 0x40098d: Stereo Amp-Out R/L
+  Control: name="Microphone 3 Capture Switch", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x00 0x00]
+  Pincap 0x00003737: IN OUT Detect Trigger ImpSense
+    Vref caps: HIZ 50 GRD 80 100
+  Pin Default 0x02a19122: [Jack] Mic at Ext Front
+    Conn = 1/8, Color = Pink
+    DefAssociation = 0x2, Sequence = 0x2
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x24: IN VREF_80
+  Unsolicited: tag=00, enabled=0
+  Connection: 1
+     0x26
+Node 0x18 [Pin Complex] wcaps 0x400081: Stereo
+  Pincap 0x00000024: IN Detect
+  Pin Default 0x9933012e: [Fixed] CD at Int ATAPI
+    Conn = ATAPI, Color = Unknown
+    DefAssociation = 0x2, Sequence = 0xe
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+Node 0x19 [Power Widget] wcaps 0x500500: Mono
+  Power states:  D0 D3
+  Power: setting=D0, actual=D0
+  Connection: 2
+     0x20 0x21
+Node 0x1a [Pin Complex] wcaps 0x400000: Mono
+  Pincap 0x00000020: IN
+  Pin Default 0x99f301f0: [Fixed] Other at Int ATAPI
+    Conn = ATAPI, Color = Unknown
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x20: IN
+Node 0x1b [Pin Complex] wcaps 0x40030d: Stereo Digital Amp-Out
+  Amp-Out caps: ofs=0x27, nsteps=0x27, stepsize=0x05, mute=1
+  Amp-Out vals:  [0xa7 0xa7]
+  Pincap 0x00000010: OUT
+  Pin Default 0x014511f0: [Jack] SPDIF Out at Ext Rear
+    Conn = Optical, Color = Black
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x00:
+  Connection: 1
+     0x02
+Node 0x1c [Pin Complex] wcaps 0x40020b: Stereo Digital Amp-In
+  Amp-In caps: ofs=0x17, nsteps=0x1f, stepsize=0x05, mute=1
+  Amp-In vals:  [0x97 0x97]
+  Pincap 0x00000020: IN
+  Pin Default 0x01c511f0: [Jack] SPDIF In at Ext Rear
+    Conn = Optical, Color = Black
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x20: IN
+Node 0x1d [Pin Complex] wcaps 0x40030d: Stereo Digital Amp-Out
+  Amp-Out caps: ofs=0x27, nsteps=0x27, stepsize=0x05, mute=1
+  Amp-Out vals:  [0xa7 0xa7]
+  Pincap 0x00000010: OUT
+  Pin Default 0x985601f0: [Fixed] Digital Out at Int HDMI
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x00:
+  Connection: 1
+     0x0b
+Node 0x1e [Audio Mixer] wcaps 0x200103: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80]
+  Connection: 2
+     0x36 0x21
+Node 0x1f [Pin Complex] wcaps 0x40000b: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=0x17, mute=0
+  Amp-In vals:  [0x00 0x00]
+  Pincap 0x00000020: IN
+  Pin Default 0x97a601f0: [Fixed] Mic at Int Riser
+    Conn = Digital, Color = Unknown
+    DefAssociation = 0xf, Sequence = 0x0
+    Misc = NO_PRESENCE
+  Pin-ctls: 0x14:
+Node 0x20 [Audio Mixer] wcaps 0x20010b: Stereo Amp-In
+  Amp-In caps: ofs=0x17, nsteps=0x1f, stepsize=0x05, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80] [0x80 0x80] [0x80 0x80] [0x80 0x80] [0x80 0x80] [0x80 0x80] [0x80 0x80]
+  Connection: 8
+     0x39 0x33 0x38 0x3d 0x34 0x3b 0x18 0x1a
+Node 0x21 [Audio Selector] wcaps 0x30010d: Stereo Amp-Out
+  Amp-Out caps: ofs=0x1f, nsteps=0x1f, stepsize=0x05, mute=1
+  Amp-Out vals:  [0x80 0x80]
+  Connection: 1
+     0x20
+Node 0x22 [Audio Mixer] wcaps 0x200103: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x00 0x00] [0x80 0x80]
+  Connection: 2
+     0x37 0x21
+Node 0x23 [Vendor Defined Widget] wcaps 0xf00100: Mono
+  Connection: 18
+     0x11* 0x12 0x13 0x14 0x15 0x16 0x17 0x18 0x24 0x25 0x38 0x39 0x3a 0x3b 0x3c 0x3d 0x20 0x21
+Node 0x24 [Pin Complex] wcaps 0x40098d: Stereo Amp-Out R/L
+  Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-Out vals:  [0x80 0x80]
+  Pincap 0x00000037: IN OUT Detect Trigger ImpSense
+  Pin Default 0x01016011: [Jack] Line Out at Ext Rear
+    Conn = 1/8, Color = Orange
+    DefAssociation = 0x1, Sequence = 0x1
+  Pin-ctls: 0x00:
+  Unsolicited: tag=00, enabled=0
+  Connection: 1
+     0x27
+Node 0x25 [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x26 [Audio Mixer] wcaps 0x200103: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80]
+  Connection: 2
+     0x32 0x21
+Node 0x27 [Audio Mixer] wcaps 0x200103: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80]
+  Connection: 2
+     0x05 0x21
+Node 0x28 [Audio Mixer] wcaps 0x200103: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80]
+  Connection: 2
+     0x0a 0x21
+Node 0x29 [Audio Mixer] wcaps 0x200103: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80]
+  Connection: 2
+     0x04 0x21
+Node 0x2a [Audio Mixer] wcaps 0x200103: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80]
+  Connection: 2
+     0x06 0x21
+Node 0x2b [Audio Mixer] wcaps 0x200103: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80]
+  Connection: 2
+     0x30 0x21
+Node 0x2c [Audio Mixer] wcaps 0x200103: Stereo Amp-In
+  Amp-In caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
+  Amp-In vals:  [0x80 0x80] [0x80 0x80]
+  Connection: 2
+     0x31 0x21
+Node 0x2d [Audio Mixer] wcaps 0x200100: Mono
+  Connection: 1
+     0x1e
+Node 0x2e [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x2f [Vendor Defined Widget] wcaps 0xf00100: Mono
+  Connection: 6
+     0x11* 0x12 0x14 0x15 0x16 0x17
+Node 0x30 [Audio Selector] wcaps 0x300101: Stereo
+  Connection: 3
+     0x03* 0x04 0x06
+Node 0x31 [Audio Selector] wcaps 0x300101: Stereo
+  Connection: 2
+     0x04* 0x0a
+Node 0x32 [Audio Selector] wcaps 0x300101: Stereo
+  Connection: 2
+     0x05* 0x04
+Node 0x33 [Audio Selector] wcaps 0x300101: Stereo
+  Connection: 3
+     0x3a* 0x25 0x24
+Node 0x34 [Audio Selector] wcaps 0x300101: Stereo
+  Connection: 3
+     0x3c* 0x25 0x24
+Node 0x35 [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x36 [Audio Selector] wcaps 0x300101: Stereo
+  Connection: 3
+     0x03* 0x04 0x06
+Node 0x37 [Audio Selector] wcaps 0x300101: Stereo
+  Connection: 3
+     0x03* 0x04 0x06
+Node 0x38 [Audio Selector] wcaps 0x30010d: Stereo Amp-Out
+  Amp-Out caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-Out vals:  [0x00 0x00]
+  Connection: 1
+     0x11
+Node 0x39 [Audio Selector] wcaps 0x30010d: Stereo Amp-Out
+  Control: name="Mic 1 Boost", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-Out vals:  [0x00 0x00]
+  Connection: 1
+     0x14
+Node 0x3a [Audio Selector] wcaps 0x30010d: Stereo Amp-Out
+  Control: name="Mic 2 Boost", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-Out vals:  [0x00 0x00]
+  Connection: 1
+     0x15
+Node 0x3b [Vendor Defined Widget] wcaps 0xf00000: Mono
+Node 0x3c [Audio Selector] wcaps 0x30010d: Stereo Amp-Out
+  Control: name="Mic 3 Boost", index=0, device=0
+    ControlAmp: chs=3, dir=Out, idx=0, ofs=0
+  Amp-Out caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-Out vals:  [0x00 0x00]
+  Connection: 1
+     0x17
+Node 0x3d [Audio Selector] wcaps 0x30010d: Stereo Amp-Out
+  Amp-Out caps: ofs=0x00, nsteps=0x03, stepsize=0x27, mute=0
+  Amp-Out vals:  [0x00 0x00]
+  Connection: 1
+     0x12
+--endcollapse--
+
+
+!!ALSA Device nodes
+!!-----------------
+
+crw-rw---- 1 root audio 116,  5 Feb  4 11:26 /dev/snd/controlC0
+crw-rw---- 1 root audio 116,  4 Feb  4 11:26 /dev/snd/hwC0D1
+crw-rw---- 1 root audio 116,  3 Feb  4 11:26 /dev/snd/pcmC0D0c
+crw-rw---- 1 root audio 116,  2 Feb  4 11:27 /dev/snd/pcmC0D0p
+crw-rw---- 1 root audio 116,  1 Feb  4 11:26 /dev/snd/seq
+crw-rw---- 1 root audio 116, 33 Feb  4 11:26 /dev/snd/timer
+
+/dev/snd/by-path:
+total 0
+drwxr-xr-x 2 root root  60 Feb  4 11:26 .
+drwxr-xr-x 3 root root 180 Feb  4 11:26 ..
+lrwxrwxrwx 1 root root  12 Feb  4 11:26 pci-0000:00:1b.0 -> ../controlC0
+
+
+!!ALSA configuration files
+!!------------------------
+
+!!User specific config file (~/.asoundrc)
+
+#defines the required PCM setup
+pcm.Euro_HP {
+	type hw
+	card 0
+	device 0
+	subdevice 0
+}
+
+pcm.Euro_MIC1 {
+	type hw
+	card 0
+	device 0
+	subdevice 0
+}
+
+pcm.Euro_MIC2 {
+	type hw
+	card 0
+	device 0
+	subdevice 1
+}
+
+pcm.Euro_MIC3 {
+	type hw
+	card 0
+	device 0
+	subdevice 2
+}
+
+pcm_slave.stereo_slave {
+	pcm "hw:0,0"
+	channels 2
+	rate 48000
+}
+
+pcm.!default {
+	type plug
+	slave stereo_slave
+}
+
+
+
+!!System wide config file (/etc/asound.conf)
+
+#
+# Place your global alsa-lib configuration here...
+#
+
+@hooks [
+	{
+		func load
+		files [
+			"/home/user/alsa_mod/confs/asoundrc.conf"
+		]
+		errors false
+	}
+]
+
+
+!!Aplay/Arecord output
+!!------------
+
+APLAY
+
+**** List of PLAYBACK Hardware Devices ****
+card 0: MID [HDA Intel MID], device 0: AD1989 EuroPCM [AD1989 EuroPCM]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+
+ARECORD
+
+**** List of CAPTURE Hardware Devices ****
+card 0: MID [HDA Intel MID], device 0: AD1989 EuroPCM [AD1989 EuroPCM]
+  Subdevices: 3/3
+  Subdevice #0: subdevice #0
+  Subdevice #1: subdevice #1
+  Subdevice #2: subdevice #2
+
+!!Amixer output
+!!-------------
+
+!!-------Mixer controls for card 0 [MID]
+
+Card hw:0 'MID'/'HDA Intel MID at 0x942c0000 irq 16'
+  Mixer name	: 'Analog Devices AD1989A'
+  Components	: 'HDA:11d4989a,bfd80000,00100300'
+  Controls      : 11
+  Simple ctrls  : 7
+Simple mixer control 'Headphone',0
+  Capabilities: pvolume pswitch penum
+  Playback channels: Front Left - Front Right
+  Limits: Playback 0 - 39
+  Mono:
+  Front Left: Playback 25 [64%] [-21.00dB] [on]
+  Front Right: Playback 25 [64%] [-21.00dB] [on]
+Simple mixer control 'Mic 1 Boost',0
+  Capabilities: volume penum
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%]
+  Front Right: 0 [0%]
+Simple mixer control 'Mic 2 Boost',0
+  Capabilities: volume penum
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%]
+  Front Right: 0 [0%]
+Simple mixer control 'Mic 3 Boost',0
+  Capabilities: volume penum
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 3
+  Front Left: 0 [0%]
+  Front Right: 0 [0%]
+Simple mixer control 'Microphone 1',0
+  Capabilities: cvolume cswitch penum
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 54
+  Front Left: Capture 0 [0%] [-58.50dB] [on]
+  Front Right: Capture 0 [0%] [-58.50dB] [on]
+Simple mixer control 'Microphone 2',0
+  Capabilities: cvolume cswitch penum
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 54
+  Front Left: Capture 0 [0%] [-58.50dB] [on]
+  Front Right: Capture 0 [0%] [-58.50dB] [on]
+Simple mixer control 'Microphone 3',0
+  Capabilities: cvolume cswitch penum
+  Capture channels: Front Left - Front Right
+  Limits: Capture 0 - 54
+  Front Left: Capture 0 [0%] [-58.50dB] [on]
+  Front Right: Capture 0 [0%] [-58.50dB] [on]
+
+
+!!Alsactl output
+!!-------------
+
+--startcollapse--
+state.MID {
+	control.1 {
+		iface MIXER
+		name 'Headphone Playback Volume'
+		value.0 25
+		value.1 25
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 39'
+			dbmin -5850
+			dbmax 0
+			dbvalue.0 -2100
+			dbvalue.1 -2100
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'Headphone Playback Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'Microphone 1 Capture Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 54'
+			dbmin -5850
+			dbmax 2250
+			dbvalue.0 -5850
+			dbvalue.1 -5850
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'Microphone 1 Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'Microphone 2 Capture Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 54'
+			dbmin -5850
+			dbmax 2250
+			dbvalue.0 -5850
+			dbvalue.1 -5850
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'Microphone 2 Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'Microphone 3 Capture Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 54'
+			dbmin -5850
+			dbmax 2250
+			dbvalue.0 -5850
+			dbvalue.1 -5850
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'Microphone 3 Capture Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'Mic 1 Boost'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'Mic 2 Boost'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'Mic 3 Boost'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 3'
+			dbmin 0
+			dbmax 3000
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+}
+--endcollapse--
+
+
+!!All Loaded Modules
+!!------------------
+
+Module
+snd_hda_codec_ad1989
+snd_hda_intel
+snd_hda_codec
+snd_hwdep
+snd_seq
+snd_seq_device
+snd_pcm
+snd_timer
+snd
+soundcore
+snd_page_alloc
+sunrpc
+cpufreq_ondemand
+acpi_cpufreq
+mperf
+ip6t_REJECT
+nf_conntrack_ipv6
+nf_defrag_ipv6
+ip6table_filter
+ip6_tables
+ipv6
+i2c_isch
+i2c_core
+microcode
+joydev
+serio_raw
+pcspkr
+lpc_sch
+mfd_core
+e1000e
+video
+output
+pata_acpi
+ata_generic
+pata_sch
+sdhci_pci
+sdhci
+mmc_core
+usb_storage
+
+
+!!Sysfs Files
+!!-----------
+
+/sys/class/sound/hwC0D1/init_pin_configs:
+0x11 0x02214030
+0x12 0x01014010
+0x13 0x991301f0
+0x14 0x02a19120
+0x15 0x02a19121
+0x16 0x01011012
+0x17 0x02a19122
+0x18 0x9933012e
+0x1a 0x99f301f0
+0x1b 0x014511f0
+0x1c 0x01c511f0
+0x1d 0x985601f0
+0x1f 0x97a601f0
+0x24 0x01016011
+
+/sys/class/sound/hwC0D1/driver_pin_configs:
+
+/sys/class/sound/hwC0D1/user_pin_configs:
+
+/sys/class/sound/hwC0D1/init_verbs:
+
+
+!!ALSA/HDA dmesg
+!!------------------
+
+[   10.810253] udev[293]: starting version 161
+[   13.330555] HDA Intel 0000:00:1b.0: PCI INT A -> GSI 16 (level, low) -> IRQ 16
+[   13.330749] HDA Intel 0000:00:1b.0: irq 40 for MSI/MSI-X
+[   13.330825] HDA Intel 0000:00:1b.0: setting latency timer to 64
+[   13.330837] ALSA hda_intel.c:2561: chipset global capabilities = 0x2200
+[   13.331164] ALSA hda_intel.c:1089: HDA snoop disabled, enabling ... OK
+[   13.339058] ALSA hda_intel.c:914: codec_mask = 0x3
+[   13.872464] e1000e: Intel(R) PRO/1000 Network Driver - 1.2.7-k2
+--
+[   14.053790] e1000e 0000:04:00.0: eth0: MAC: 1, PHY: 4, PBA No: d50854-003
+[   14.345483] ALSA hda_intel.c:707: azx_get_response timeout, polling the codec once: last cmd=0x000f0000
+[   14.345632] ALSA hda_intel.c:1354: codec #0 probed OK
+[   14.804728] input: PC Speaker as /devices/platform/pcspkr/input/input4
+[   15.375499] ALSA hda_intel.c:707: azx_get_response timeout, polling the codec once: last cmd=0x100f0000
+[   15.375519] ALSA hda_intel.c:1354: codec #1 probed OK
+[   16.376028] ALSA hda_intel.c:717: azx_get_response timeout, switching to polling mode: last cmd=0x000f0000
+[   16.498708] ALSA patch_sigmatel.c:5633: hda_codec: 92HD71B8X: BIOS auto-probing.
+[   16.498722] ALSA patch_sigmatel.c:5741: Found board config: -1
+[   16.498736] ALSA hda_codec.c:4633: autoconfig: line_outs=1 (0xd/0x0/0x0/0x0/0x0)
+[   16.498750] ALSA hda_codec.c:4637:    speaker_outs=0 (0x0/0x0/0x0/0x0/0x0)
+[   16.498760] ALSA hda_codec.c:4641:    hp_outs=1 (0xa/0x0/0x0/0x0/0x0)
+[   16.498771] ALSA hda_codec.c:4642:    mono: mono_out=0x0
+[   16.498780] ALSA hda_codec.c:4645:    dig-out=0x1e/0x0
+[   16.498789] ALSA hda_codec.c:4646:    inputs:
+[   16.498797] ALSA hda_codec.c:4650:  Mic=0xb
+[   16.498806] ALSA hda_codec.c:4650:  Line=0xc
+[   16.498813] ALSA hda_codec.c:4650:  Line=0xe
+[   16.498820] ALSA hda_codec.c:4652: 
+[   16.499187] ALSA patch_sigmatel.c:3045: stac92xx: dac_nids=1 (0x10/0x0/0x0/0x0/0x0)
+[   16.499554] input: HDA Digital PCBeep as /devices/pci0000:00/0000:00:1b.0/input/input5
+[   16.523306] ALSA hda_generic.c:585: AUD_IN = 8
+[   16.523318] ALSA hda_generic.c:238: UNMUTE IN: NID=0x8 IDX=0x0
+[   16.523411] ALSA hda_generic.c:238: UNMUTE IN: NID=0x14 IDX=0x0
+[   16.523518] ALSA hda_generic.c:238: UNMUTE IN: NID=0x39 IDX=0x0
+[   16.523624] ALSA hda_generic.c:223: UNMUTE OUT: NID=0x39
+[   16.523742] ALSA hda_generic.c:253: CONNECT: NID=0xc IDX=0x1
+[   16.523752] ALSA hda_generic.c:238: UNMUTE IN: NID=0xc IDX=0x1
+[   16.523870] ALSA hda_generic.c:223: UNMUTE OUT: NID=0xc
+[   16.523990] ALSA hda_generic.c:618: [Capture Source] NID=0x8, #SRC=1
+[   16.523998] ALSA hda_generic.c:621:   [Front Mic] IDX=0x0
+[   16.524033] ALSA hda_generic.c:290: AUD_OUT found 4
+[   16.524042] ALSA hda_generic.c:253: CONNECT: NID=0x29 IDX=0x0
+[   16.524054] ALSA hda_generic.c:238: UNMUTE IN: NID=0x29 IDX=0x0
+[   16.524189] ALSA hda_generic.c:223: UNMUTE OUT: NID=0x29
+[   16.524283] ALSA hda_generic.c:238: UNMUTE IN: NID=0x12 IDX=0x0
+[   16.524371] ALSA hda_generic.c:223: UNMUTE OUT: NID=0x12
+[   16.524490] ALSA hda_generic.c:223: UNMUTE OUT: NID=0x12
+[   16.524505] ALSA hda_generic.c:290: AUD_OUT found 3
+[   16.524515] ALSA hda_generic.c:290: AUD_OUT found 4
+[   16.524523] ALSA hda_generic.c:253: CONNECT: NID=0x37 IDX=0x1
+[   16.524535] ALSA hda_generic.c:238: UNMUTE IN: NID=0x37 IDX=0x1
+[   16.524636] ALSA hda_generic.c:223: UNMUTE OUT: NID=0x37
+[   16.524725] ALSA hda_generic.c:253: CONNECT: NID=0x22 IDX=0x0
+[   16.524737] ALSA hda_generic.c:238: UNMUTE IN: NID=0x22 IDX=0x0
+[   16.524875] ALSA hda_generic.c:223: UNMUTE OUT: NID=0x22
+[   16.524976] ALSA hda_generic.c:238: UNMUTE IN: NID=0x11 IDX=0x0
+[   16.525097] ALSA hda_generic.c:223: UNMUTE OUT: NID=0x11
+[   16.525203] ALSA hda_generic.c:223: UNMUTE OUT: NID=0x11
+[   16.530132] ALSA control.c:348: control 2:0:0:Line Jack Mode:0 is already present
+[   16.530285] ALSA hda_codec.c:2164: Cannot find slave Surround Playback Volume, skipped
+[   16.530296] ALSA hda_codec.c:2164: Cannot find slave Center Playback Volume, skipped
+[   16.530305] ALSA hda_codec.c:2164: Cannot find slave LFE Playback Volume, skipped
+[   16.530315] ALSA hda_codec.c:2164: Cannot find slave Side Playback Volume, skipped
+[   16.530328] ALSA hda_codec.c:2164: Cannot find slave Speaker Playback Volume, skipped
+[   16.530351] ALSA hda_codec.c:2164: Cannot find slave Surround Playback Switch, skipped
+[   16.530361] ALSA hda_codec.c:2164: Cannot find slave Center Playback Switch, skipped
+[   16.530370] ALSA hda_codec.c:2164: Cannot find slave LFE Playback Switch, skipped
+[   16.530379] ALSA hda_codec.c:2164: Cannot find slave Side Playback Switch, skipped
+[   16.530393] ALSA hda_codec.c:2164: Cannot find slave Speaker Playback Switch, skipped
+[   16.530495] ALSA hda_generic.c:253: CONNECT: NID=0x8 IDX=0x0
+[   16.530511] ALSA hda_generic.c:733: [Master Playback Volume] NID=0x4, DIR=OUT
+[   16.530523] ALSA control.c:348: control 2:0:0:Master Playback Volume:0 is already present
+[   16.530535] hda_codec: cannot build controls for #1 (error -16)
+[   16.531104] input: HDA Intel MID Line In at Ext Rear Jack as /devices/pci0000:00/0000:00:1b.0/input/input6
+[   16.531522] input: HDA Intel MID Line In at Ext Rear Jack as /devices/pci0000:00/0000:00:1b.0/input/input7
+[   16.531855] input: HDA Intel MID Mic at Ext Rear Jack as /devices/pci0000:00/0000:00:1b.0/input/input8
+[   16.532215] input: HDA Intel MID Line Out at Ext Rear Jack as /devices/pci0000:00/0000:00:1b.0/input/input9
+[   16.532545] input: HDA Intel MID HP Out at Ext Rear Jack as /devices/pci0000:00/0000:00:1b.0/input/input10
+[   16.532751] audit: name_count maxed, losing inode data: dev=00:05, inode=18955
+--
+[   48.659721] readahead-collector: finished
+[  147.974383] ALSA hda_intel.c:1679: azx_pcm_prepare: bufsize=0x10000, format=0x11
+[  147.974432] ALSA hda_codec.c:1227: hda_codec_setup_stream: NID=0x21, stream=0x3, channel=0, format=0x11
+[  147.976098] ALSA hda_codec.c:1227: hda_codec_setup_stream: NID=0x22, stream=0x3, channel=0, format=0x11
+[  147.978384] ALSA hda_codec.c:1227: hda_codec_setup_stream: NID=0x10, stream=0x3, channel=0, format=0x11
+[  147.980066] ALSA hda_codec.c:1227: hda_codec_setup_stream: NID=0x11, stream=0x3, channel=0, format=0x11
+[  167.583810] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x10
+[  167.583834] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x11
+[  167.583852] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x21
+[  167.583869] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x22
+[  167.583971] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x10
+[  167.583990] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x11
+[  185.217593] ALSA hda_intel.c:1679: azx_pcm_prepare: bufsize=0x10000, format=0x4011
+[  185.217627] ALSA hda_codec.c:1227: hda_codec_setup_stream: NID=0x21, stream=0x3, channel=0, format=0x4011
+[  185.219093] ALSA hda_codec.c:1227: hda_codec_setup_stream: NID=0x22, stream=0x3, channel=0, format=0x4011
+[  185.221104] ALSA hda_codec.c:1227: hda_codec_setup_stream: NID=0x10, stream=0x3, channel=0, format=0x4011
+[  185.223096] ALSA hda_codec.c:1227: hda_codec_setup_stream: NID=0x11, stream=0x3, channel=0, format=0x4011
+[  190.109733] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x10
+[  190.109757] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x11
+[  190.109776] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x21
+[  190.109793] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x22
+[  190.109905] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x10
+[  190.109924] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x11
+[  526.886592] HDA Intel 0000:00:1b.0: PCI INT A disabled
+[  528.610217] snd: Not freed snd_alloc_kmalloc = 72
+[  528.610244] snd: kmalloc(72) from f82aa1de not freed
+[ 2026.501776] HDA Intel 0000:00:1b.0: PCI INT A -> GSI 16 (level, low) -> IRQ 16
+[ 2026.501800] hda_intel: msi for device 8086:8119 set to 0
+[ 2026.501812] hda_intel: position_fix set to 3 for device 8086:8119
+[ 2026.501823] hda_intel: probe_mask set to 0x102 for device 8086:8119
+[ 2026.501832] hda_intel: codec_mask forced to 0x2
+[ 2026.501902] ALSA hda_intel.c:2104: Grabbing IRQ 16, MSI state 0
+[ 2026.501993] HDA Intel 0000:00:1b.0: setting latency timer to 64
+[ 2026.502061] ALSA hda_intel.c:2567: chipset global capabilities = 0x2200
+[ 2026.502470] ALSA hda_intel.c:2096: Init stream 0, offset 80, stream_tag 1
+[ 2026.502485] ALSA hda_intel.c:2096: Init stream 1, offset a0, stream_tag 2
+[ 2026.502499] ALSA hda_intel.c:2096: Init stream 2, offset c0, stream_tag 3
+[ 2026.502512] ALSA hda_intel.c:2096: Init stream 3, offset e0, stream_tag 4
+[ 2026.510442] ALSA hda_intel.c:1354: codec #1 probed OK
+[ 2026.904788] Apply patch ad1989 to codec @addr 1
+--
+[ 2060.140213] OPENING playback stream
+[ 2060.157857] ALSA pcm_native.c:1334: Preparing 2 channels with status 1
+[ 2060.157899] ALSA hda_intel.c:1679: azx_pcm_prepare: bufsize=0xfa00, format=0xa11
+[ 2060.157930] PREP pcm playback stream_tag:3, NID:3 format:2577
+[ 2060.157944] ALSA hda_codec.c:1227: hda_codec_setup_stream: NID=0x3, stream=0x3, channel=0, format=0xa11
+[ 2062.461842] CLEANUP playback stream
+[ 2062.461866] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x3
+[ 2062.461983] CLEANUP playback stream
+[ 2062.462000] ALSA hda_codec.c:1290: hda_codec_cleanup_stream: NID=0x3
+[ 2062.462017] CLOSING playback stream
+
+

@@ -152,7 +152,7 @@ static struct hda_pcm_stream ad1989_pcm_playback = {
  * PCM stream callbacks and initialization: Capture
  */
 static hda_nid_t ad1989_adc_nids[3] =      {
-       MIC1_ADC_NID, MIC2_ADC_NID, MIC3_ADC_NID
+       MIC1_ADC_NID, MIC2_ADC_NID//, MIC3_ADC_NID
        };
 
 static int ad1989_mic_open(struct hda_pcm_stream *hinfo, struct hda_codec *codec,
@@ -206,7 +206,7 @@ static int ad1989_mic_clean(struct hda_pcm_stream *hinfo, struct hda_codec *code
 }
 
 static struct hda_pcm_stream ad1989_pcm_capture = {
-	.substreams = 3,
+	.substreams = 2,
 	.channels_min = 1,
 	.channels_max = 6,
 	.nid = 0,	//blank for now
