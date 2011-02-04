@@ -138,7 +138,7 @@ static int ad1989_hp_clean(struct hda_pcm_stream *hinfo, struct hda_codec *codec
 
 static struct hda_pcm_stream ad1989_pcm_playback = {
 	.substreams = 1,
-	.channels_min = 2,
+	.channels_min = 1,
 	.channels_max = 2,
 	.nid = HP_DAC_NID,
 	.ops = {
@@ -206,7 +206,7 @@ static int ad1989_mic_clean(struct hda_pcm_stream *hinfo, struct hda_codec *code
 }
 
 static struct hda_pcm_stream ad1989_pcm_capture = {
-	.substreams = 2,
+	.substreams = 3,
 	.channels_min = 1,
 	.channels_max = 6,
 	.nid = 0,	//blank for now
@@ -340,14 +340,14 @@ static struct snd_kcontrol_new ad1989_mixers[] = {
 	HDA_CODEC_VOLUME("Headphone Playback Volume", 0x03, 0, HDA_OUTPUT),
 	HDA_CODEC_MUTE("Headphone Playback Switch", 0x11, 0, HDA_OUTPUT),
 	HDA_CODEC_VOLUME("Microphone 1 Capture Volume", 0x0C, 0, HDA_OUTPUT),
-	HDA_CODEC_MUTE("Microphone 1 Capture Switch", 0x14, 0, HDA_OUTPUT),
+	HDA_BIND_MUTE("Microphone 1 Capture Switch", 0x14, 0, HDA_OUTPUT),
 	HDA_CODEC_VOLUME("Microphone 2 Capture Volume", 0x0D, 0, HDA_OUTPUT),
-	HDA_CODEC_MUTE("Microphone 2 Capture Switch", 0x15, 0, HDA_OUTPUT),
+	HDA_BIND_MUTE("Microphone 2 Capture Switch", 0x15, 0, HDA_OUTPUT),
 	HDA_CODEC_VOLUME("Microphone 3 Capture Volume", 0x0E, 0, HDA_OUTPUT),
-	HDA_CODEC_MUTE("Microphone 3 Capture Switch", 0x17, 0, HDA_OUTPUT),
-	HDA_CODEC_VOLUME("Mic 1 Boost", 0x39, 0 ,HDA_OUTPUT),
-	HDA_CODEC_VOLUME("Mic 2 Boost", 0x3A, 0 ,HDA_OUTPUT),
-	HDA_CODEC_VOLUME("Mic 3 Boost", 0x3C, 0 ,HDA_OUTPUT),
+	HDA_BIND_MUTE("Microphone 3 Capture Switch", 0x17, 0, HDA_OUTPUT),
+	HDA_CODEC_VOLUME("Mic 1 Capture Boost", 0x39, 0 ,HDA_OUTPUT),
+	HDA_CODEC_VOLUME("Mic 2 Capture Boost", 0x3A, 0 ,HDA_OUTPUT),
+	HDA_CODEC_VOLUME("Mic 3 Capture Boost", 0x3C, 0 ,HDA_OUTPUT),
 	{}
 };
 #ifdef WITH_BEEP
