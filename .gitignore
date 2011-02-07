@@ -3,7 +3,7 @@ Kconfig
 Mod*
 mod*
 *sw[op]
-DEBUG
-archive
-wav_sample
-test
+DEBUG/
+archive/
+wav_sample/
+test/
