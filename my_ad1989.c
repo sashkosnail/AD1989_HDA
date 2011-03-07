@@ -24,7 +24,7 @@
 #include <linux/slab.h>
 #include <linux/pci.h>
 #include <sound/core.h>
-
+//include bropken get new version
 #include "hda_codec.h"
 #include "hda_local.h"
 #include "hda_beep.h"  // make sure to setup the beep amp to route out of port A
