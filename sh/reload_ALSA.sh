@@ -5,7 +5,8 @@ if [ -n c_mod ];then
 	if [ $? -eq 0 ]; then
 		modprobe -v snd_hda_intel
 		if [ $? -eq 0 ]; then
-			aplay -vDhw:0,0 /home/user/alsa_mod/wav_sample/A_widex.wav
+		#	aplay -vDhw:0,0 /home/user/alsa_mod/wav_sample/A_widex.wav
+			alsamixer
 		else
 			echo "Cannot Load Module"
 		fi

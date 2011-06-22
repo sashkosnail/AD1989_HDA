@@ -21,8 +21,10 @@ if [ -e "$work_dir/test.wav" ]; then
 fi
 file_size=0;
 while [ $file_size -le 44 ]; do
-	strace -o $work_dir/../DEBUG/strace_so_mic$dev_num.txt arecord -Dhw:0,0,$dev_num -fdat $work_dir/test.wav &
+	strace -o $work_dir/../DEBUG/strace_so_mic$dev_num.txt arecord -Dhw:0,0,$dev_num -fdat $work_dir/test.wav -d 10 &
+	echo "Recording Begin..."
 	sleep $play_delay
+	echo "Playback Begin..."
 	aplay -Dhw:0,0,0 $work_dir/test.wav
 	sleep $(($delay-$play_delay));
 	file_size=`stat -c%s $work_dir/test.wav`

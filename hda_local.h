@@ -22,7 +22,7 @@
 
 #ifndef __SOUND_HDA_LOCAL_H
 #define __SOUND_HDA_LOCAL_H
-
+#define TLV_DB_SCALE_MUTE	0x10000
 /* We abuse kcontrol_new.subdev field to pass the NID corresponding to
  * the given new control.  If id.subdev has a bit flag HDA_SUBDEV_NID_FLAG,
  * snd_hda_ctl_add() takes the lower-bit subdev value as a valid NID.
