@@ -323,7 +323,7 @@ static struct hda_verb ad1989_init_verbs[] = {
 	{0x0E, AC_VERB_SET_CONNECT_SEL,			0x04},//select PortE boost, NID 0x3c
 	{0x0E, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_UNMUTE},//unmute amp
 	{0x3C, AC_VERB_SET_AMP_GAIN_MUTE,		AMP_OUT_ZERO},//pre-amp @0db
-	{0x17, AC_VERB_SET_CONFIG_DEFAULT_BYTES_0,	0x22},//Association 2, seq 1
+	{0x17, AC_VERB_SET_CONFIG_DEFAULT_BYTES_0,	0x21},//Association 2, seq 2
 	{0x17, AC_VERB_SET_CONFIG_DEFAULT_BYTES_1,	0x91},//pink, no jack detect
 	{0x17, AC_VERB_SET_CONFIG_DEFAULT_BYTES_2,	0xA1},//mic, 3.5mm
 	{0x17, AC_VERB_SET_CONFIG_DEFAULT_BYTES_3,	0x02},//external, front
@@ -405,7 +405,7 @@ static int ad1989_build_pcm(struct hda_codec *codec)
 	struct ad1989_spec *spec = codec->spec;
 	struct hda_pcm *info = spec->pcm_rec;
 
-	codec->num_pcms = 1;
+	codec->num_pcms = 2;
 	codec->pcm_info = info;
 
 	info->name = "AD1989 EuroPCM";

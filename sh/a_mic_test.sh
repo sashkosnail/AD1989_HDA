@@ -1,4 +1,8 @@
 #!/bin/bash
+#needs outputs	strace, verb list,pcm setup, format
+#needs inputs	device formats(c,r,f) files (output_wav output_conf) 
+sudo lspci -vvvnnx|grep 00:1b.0 -A42
+out_dir="/home/user/alsa_mod/DEBUG"
 work_dir="/home/user/alsa_mod/test"
 if [ -z $1 ]; then 
 	dev_num=0
@@ -21,7 +25,7 @@ if [ -e "$work_dir/test.wav" ]; then
 fi
 file_size=0;
 while [ $file_size -le 44 ]; do
-	strace -o $work_dir/../DEBUG/strace_so_mic$dev_num.txt arecord -Dhw:0,0,$dev_num -fdat $work_dir/test.wav -d 10 &
+	strace -o $work_dir/../DEBUG/strace_so_mic$dev_num.txt arecord -Dhw:0,0,$dev_num -fS16_LE -c2 -r44100 $work_dir/test.wav -d 10 &
 	echo "Recording Begin..."
 	sleep $play_delay
 	echo "Playback Begin..."
