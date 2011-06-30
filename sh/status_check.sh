@@ -48,7 +48,7 @@ for (( i=num_itt; i != 0; i--)); do
 #Compile DMESG data
 	dmesg_txt="\033[4,1f\n\n\033[0m"
 	dmesg_out=`dmesg | grep -C1 -E $dmesg_query|tail -35`
-	dmesg_txt=`diff <(echo "$dmesg_out") <(echo "$dmesg_out_old")`
+	#dmesg_txt=`diff <(echo "$dmesg_out") <(echo "$dmesg_out_old")`
 	dmesg_out_old=$dmesg_out
 	dmesg_txt+="\033[0;0f"
 #Insert header
@@ -60,4 +60,3 @@ for (( i=num_itt; i != 0; i--)); do
 #Update every update_s in seVVc
 	sleep $update_s
 done
-  16:        915          0   IO-APIC-fasteoi   hda_intel
